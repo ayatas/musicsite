@@ -4568,3 +4568,133 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/musicsite/gii
 ---
+2014/07/30 10:01:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost/musicsite/admin/
+---
+2014/07/30 10:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backgrounds/calActiveBg.png".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backgrou...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/images/backgrounds/calActiveBg.png
+HTTP_REFERER=http://localhost/musicsite/css/fullcalendar.css
+---
+2014/07/30 10:01:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost/musicsite/admin
+---
+2014/07/30 10:01:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backgrounds/calActiveBg.png".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backgrou...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/images/backgrounds/calActiveBg.png
+HTTP_REFERER=http://localhost/musicsite/css/fullcalendar.css
+---
+2014/07/30 10:02:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost/musicsite/admin/
+---
+2014/07/30 10:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backgrounds/calActiveBg.png".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backgrou...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/images/backgrounds/calActiveBg.png
+HTTP_REFERER=http://localhost/musicsite/css/fullcalendar.css
+---
+2014/07/30 10:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost/musicsite/admin
+---
+2014/07/30 10:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backgrounds/calActiveBg.png".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backgrou...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/images/backgrounds/calActiveBg.png
+HTTP_REFERER=http://localhost/musicsite/css/fullcalendar.css
+---
+2014/07/30 10:02:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost/musicsite/admin/
+---
+2014/07/30 10:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backgrounds/calActiveBg.png".' in E:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backgrou...')
+#1 E:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 E:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 E:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 E:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/images/backgrounds/calActiveBg.png
+HTTP_REFERER=http://localhost/musicsite/css/fullcalendar.css
+---
