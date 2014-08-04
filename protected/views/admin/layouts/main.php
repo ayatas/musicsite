@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<div id="header">
-			<h1><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/">Unicorn Admin</a></h1>
+			<h1><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/">Music Site Admin</a></h1>
 		</div>		
 		<div id="user-nav" class="navbar navbar-inverse">
 			<ul class="nav btn-group">
@@ -54,9 +54,7 @@
 			<div class="container-fluid">				
 				<?php echo $content; ?>				
 				<div class="row-fluid">
-					<div id="footer" class="span12">
-						2013 - 2014 &copy; Bandcamp Admin. Brought to you by <a href="<?php echo Yii::app()->getBaseUrl(true); ?>">Bandcamp</a>
-					</div>
+					<div id="footer" class="span12"> 2013 - 2014 &copy; Bandcamp Admin.</div>
 				</div>
 			</div>
 		</div>

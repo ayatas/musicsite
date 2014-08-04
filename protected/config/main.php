@@ -42,7 +42,7 @@ return array(
 		// uncomment the following to use a MySQL database
 
 		'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=bandcamp',
+			'connectionString' => 'mysql:host=localhost;dbname=musicsite',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

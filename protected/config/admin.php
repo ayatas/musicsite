@@ -13,6 +13,7 @@ require (dirname(__FILE__) . '/main.php'), array(
 			'rules' => array(
 				'admin' => 'site/index',
 				'admin/<action>' => 'site/<action>',
+				'admin/<controller:\w+>/<action:\w+>' =>'<controller>/<action>',
 				'admin/<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'admin/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 			),

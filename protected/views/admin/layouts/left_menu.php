@@ -10,18 +10,17 @@ $this->widget('zii.widgets.CMenu', array(
 		),
 
 		array(
-
-			'label' => '<i class="icon icon-file"></i><span>Pages</span><span class="label">2</span>',
+			'label' => '<i class="icon icon-file"></i><span>Pages</span><!--<span class="label">2</span>-->',
 			'url' => array('#'),
 			'itemOptions' => array('class' => 'submenu'),
 			'items' => array(
 				array(
 					'label' => 'All Pages',
-					'url' => array('#')
+					'url' => array('page/index')
 				),
 				array(
 					'label' => 'Create Page',
-					'url' => array('#')
+					'url' => array('page/create')
 				),
 				array(
 					'label' => '',
