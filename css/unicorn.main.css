@@ -24,18 +24,20 @@ a:hover {
 }
 
 #header h1 {
-    background: url("../images/logo.png") no-repeat scroll 0 0 transparent;
-    height: 31px;
+  /*  background: url("../images/logo.png") no-repeat scroll 0 0 transparent;*/
+ /*   height: 31px;*/
     left: 15px;
-    line-height: 600px;
+    /*line-height: 600px;*/
     overflow: hidden;
     position: relative;
     top: 24px;
     width: 191px;
+	font-size:22px;
 }
 
 #header h1 a {
     display: block;
+	color:#FFF;
 }
 
 /* Search input */
@@ -1394,6 +1396,9 @@ form {
     font-size: 11px;
     color: #777777;
 }
+.mainContent{
+		min-height:350px;
+	}
 /* Responsive design */
 @media (max-width: 480px) {
 	#header h1 {
