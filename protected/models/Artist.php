@@ -42,7 +42,7 @@ class Artist extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('userId, genreId', 'required'),
+			array('userId, genreId, bandName', 'required'),
 			array('userId, genreId', 'numerical', 'integerOnly'=>true),
 			array('bandName, url, fanEmail, genreTags, paypalEmail, currency, customHeader, showSocial, homePage', 'length', 'max'=>45),
 			array('showNavigation', 'length', 'max'=>1),
@@ -136,4 +136,5 @@ class Artist extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
 }

@@ -8,7 +8,6 @@ $this->breadcrumbs = array(
     'Login',
 );
 ?>
-
 <?php $form = $this->beginWidget('CActiveForm', array(
         'id' =>'login-form',
         'enableClientValidation'=>true,
@@ -16,6 +15,7 @@ $this->breadcrumbs = array(
             'validateOnSubmit'=>true,
         ),
     )); ?>
+    <?php echo $form->errorSummary($model); ?>
 <p>
     Enter username and password to continue.
 </p>
@@ -26,8 +26,8 @@ $this->breadcrumbs = array(
                 <i class="icon-user">
                 </i>
             </span>
-            <?php echo $form->textField($model,'username',array('placeholder'=>'Username')); ?>
-            <?php echo $form->error($model,'username'); ?>
+            <?php echo $form->textField($model,'name',array('placeholder'=>'Username')); ?>
+            <?php echo $form->error($model,'name'); ?>
         </div>
     </div>
 </div>
@@ -39,14 +39,6 @@ $this->breadcrumbs = array(
                 </i>
             </span><?php echo $form->passwordField($model,'password',array('placeholder'=>'Password')); ?>
             <?php echo $form->error($model,'password'); ?>
-        </div>
-    </div>
-</div>
-<div class="control-group">
-    <div class="controls remember">
-        <div class="input-prepend">
-        <?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>		
         </div>
     </div>
 </div>

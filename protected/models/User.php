@@ -23,6 +23,7 @@
  */
 class User extends CActiveRecord
 {
+	private $_identity;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -39,6 +40,10 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('name, email, password', 'required','on'=>'create'),
+			array('name, email', 'unique','on'=>'create'),
+			array('name, password', 'required','on'=>'login'),
+			array('password', 'authenticate','on'=>'login'),
 			array('name, email, password, image, location, websites', 'length', 'max'=>45),
 			array('userType', 'length', 'max'=>6),
 			array('status', 'length', 'max'=>1),
@@ -128,5 +133,31 @@ class User extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	/**
+	 * Authenticates the password.
+	 * This is the 'authenticate' validator as declared in rules().
+	 */
+	public function authenticate($attribute,$params)
+	{
+		if(!$this->hasErrors())
+		{
+			$this->_identity=new UserIdentity($this->name,$this->password,'user');
+			if(!$this->_identity->authenticate())
+				$this->addError('password','Incorrect username or password.');
+		}
+	}
+	
+	public function login()
+	{
+		if($this->_identity===null)
+		{
+			$this->_identity=new UserIdentity($this->name,$this->password,'user');
+			$this->_identity->authenticate();
+			echo "Hello";
+		}
+		else
+			return false;
 	}
 }
