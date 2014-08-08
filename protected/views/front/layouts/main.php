@@ -30,10 +30,15 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Artist Signup', 'url'=>array('/artist/index')),
-				array('label'=>'Fan Signup', 'url'=>array('/site/index')),				
+				array('label'=>'Artist Signup', 'url'=>array('/artist/index'),'visible'=>Yii::app()->session['userid']==""),
+				array('label'=>'Fan Signup', 'url'=>array('/site/index'), 'visible'=>Yii::app()->session['userid']==""),	
+				array('label'=>'Login', 'url'=>array('/artist/login'), 'visible'=>Yii::app()->session['userid']==""),
+				array('label'=>'Profile', 'url'=>array('/artist/profile'), 'visible'=>Yii::app()->session['userid']!=""),
+				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>Yii::app()->session['userid']!="")
 			),
-		)); ?>
+		)); 
+		?>
+        
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

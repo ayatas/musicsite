@@ -9,19 +9,31 @@
  * @property string $bandName
  * @property string $url
  * @property string $fanEmail
+ * @property string $shoFanEmail
  * @property integer $genreId
  * @property string $genreTags
  * @property string $paypalEmail
  * @property string $currency
+ * @property integer $yourLocation
+ * @property integer $taxPercent
+ * @property string $returnPolicy
+ * @property string $shippingInfo
+ * @property string $musicLink
+ * @property string $merchLink
  * @property string $showNavigation
  * @property string $customHeader
  * @property string $showSocial
  * @property string $homePage
+ * @property string $upcomingShows
+ * @property string $songkickId
+ * @property string $recommendedheading
+ * @property string $albumUrl
+ * @property string $albumDescription
  *
  * The followings are the available model relations:
  * @property Albums[] $albums
- * @property User $user
  * @property Genre $genre
+ * @property User $user
  * @property Design[] $designs
  */
 class Artist extends CActiveRecord
@@ -42,13 +54,16 @@ class Artist extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('userId, genreId, bandName', 'required'),
-			array('userId, genreId', 'numerical', 'integerOnly'=>true),
-			array('bandName, url, fanEmail, genreTags, paypalEmail, currency, customHeader, showSocial, homePage', 'length', 'max'=>45),
-			array('showNavigation', 'length', 'max'=>1),
+			array('userId,url,bandName,fanEmail,shoFanEmail,paypalEmail,genreId', 'required','on'=>'update'),
+			array('bandName,userId', 'required','on'=>'create'),
+			array('userId, genreId, yourLocation, taxPercent', 'numerical', 'integerOnly'=>true),
+			array('bandName, url, fanEmail, genreTags, paypalEmail, currency, customHeader', 'length', 'max'=>45),
+			array('shoFanEmail, showNavigation, showSocial, homePage, upcomingShows', 'length', 'max'=>1),
+			array('musicLink, merchLink, recommendedheading', 'length', 'max'=>255),
+			array('songkickId', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, userId, bandName, url, fanEmail, genreId, genreTags, paypalEmail, currency, showNavigation, customHeader, showSocial, homePage', 'safe', 'on'=>'search'),
+			array('id, userId, bandName, url, fanEmail, shoFanEmail, genreId, genreTags, paypalEmail, currency, yourLocation, taxPercent, returnPolicy, shippingInfo, musicLink, merchLink, showNavigation, customHeader, showSocial, homePage, upcomingShows, songkickId, recommendedheading, albumUrl, albumDescription', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,8 +76,8 @@ class Artist extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'albums' => array(self::HAS_MANY, 'Albums', 'artistId'),
-			'user' => array(self::BELONGS_TO, 'User', 'userId'),
 			'genre' => array(self::BELONGS_TO, 'Genre', 'genreId'),
+			'user' => array(self::BELONGS_TO, 'User', 'userId'),
 			'designs' => array(self::HAS_MANY, 'Design', 'artistId'),
 		);
 	}
@@ -78,14 +93,26 @@ class Artist extends CActiveRecord
 			'bandName' => 'Band Name',
 			'url' => 'Url',
 			'fanEmail' => 'Fan Email',
+			'shoFanEmail' => 'Sho Fan Email',
 			'genreId' => 'Genre',
 			'genreTags' => 'Genre Tags',
 			'paypalEmail' => 'Paypal Email',
 			'currency' => 'Currency',
+			'yourLocation' => 'Your Location',
+			'taxPercent' => 'Tax Percent',
+			'returnPolicy' => 'Return Policy',
+			'shippingInfo' => 'Shipping Info',
+			'musicLink' => 'Music Link',
+			'merchLink' => 'Merch Link',
 			'showNavigation' => 'Show Navigation',
 			'customHeader' => 'Custom Header',
 			'showSocial' => 'Show Social',
 			'homePage' => 'Home Page',
+			'upcomingShows' => 'Upcoming Shows',
+			'songkickId' => 'Songkick',
+			'recommendedheading' => 'Recommendedheading',
+			'albumUrl' => 'Album Url',
+			'albumDescription' => 'Album Description',
 		);
 	}
 
@@ -112,14 +139,26 @@ class Artist extends CActiveRecord
 		$criteria->compare('bandName',$this->bandName,true);
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('fanEmail',$this->fanEmail,true);
+		$criteria->compare('shoFanEmail',$this->shoFanEmail,true);
 		$criteria->compare('genreId',$this->genreId);
 		$criteria->compare('genreTags',$this->genreTags,true);
 		$criteria->compare('paypalEmail',$this->paypalEmail,true);
 		$criteria->compare('currency',$this->currency,true);
+		$criteria->compare('yourLocation',$this->yourLocation);
+		$criteria->compare('taxPercent',$this->taxPercent);
+		$criteria->compare('returnPolicy',$this->returnPolicy,true);
+		$criteria->compare('shippingInfo',$this->shippingInfo,true);
+		$criteria->compare('musicLink',$this->musicLink,true);
+		$criteria->compare('merchLink',$this->merchLink,true);
 		$criteria->compare('showNavigation',$this->showNavigation,true);
 		$criteria->compare('customHeader',$this->customHeader,true);
 		$criteria->compare('showSocial',$this->showSocial,true);
 		$criteria->compare('homePage',$this->homePage,true);
+		$criteria->compare('upcomingShows',$this->upcomingShows,true);
+		$criteria->compare('songkickId',$this->songkickId,true);
+		$criteria->compare('recommendedheading',$this->recommendedheading,true);
+		$criteria->compare('albumUrl',$this->albumUrl,true);
+		$criteria->compare('albumDescription',$this->albumDescription,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -136,5 +175,4 @@ class Artist extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
 }

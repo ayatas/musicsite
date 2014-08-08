@@ -9225,3 +9225,1753 @@ Stack trace:
 REQUEST_URI=/musicsite/js/jquery.ui.custom.js
 HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
 ---
+2014/08/04 13:43:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/04 13:44:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/04 13:44:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/05 05:01:39 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist
+---
+2014/08/05 05:01:54 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist
+---
+2014/08/05 05:06:03 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist
+---
+2014/08/05 05:10:10 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist
+---
+2014/08/05 05:30:33 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist
+---
+2014/08/05 05:36:01 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 05:41:01 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 05:43:16 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 05:51:38 [error] [exception.CException] exception 'CException' with message 'Property "Artist.userName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('userName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'userName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'userName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'userName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'userName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 05:53:58 [error] [exception.CException] exception 'CException' with message 'Property "Artist.name" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('name')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Artist), 'name')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Artist), 'name', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Artist), 'name', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(19): CActiveForm->textField(Object(Artist), 'name', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 05:54:55 [error] [exception.CException] exception 'CException' with message 'Property "User.bandName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('bandName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('bandName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(User), 'bandName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(User), 'bandName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(User), 'bandName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(46): CActiveForm->textField(Object(User), 'bandName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 05:58:09 [error] [exception.CException] exception 'CException' with message 'Property "User.bandName" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('bandName')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('bandName')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(User), 'bandName')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(User), 'bandName', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(User), 'bandName', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(46): CActiveForm->textField(Object(User), 'bandName', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 06:01:50 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "signup".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CController->render('signup', Array)
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 06:19:49 [warning] [application] Failed to set unsafe attribute "bandName" of "User".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (16)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/05 06:22:06 [warning] [application] Failed to set unsafe attribute "bandName" of "User".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (16)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/05 06:24:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'name_UNIQUE'. The SQL statement executed was: INSERT INTO `tbl_user` (`name`, `password`, `email`) VALUES (:yp0, :yp1, :yp2).
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (17)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/05 06:24:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'name_UNIQUE'. The SQL statement executed was: INSERT INTO `tbl_user` (`name`, `password`, `email`) VALUES (:yp0, :yp1, :yp2)' in D:\wamp\www\musicsite\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(17): CActiveRecord->save()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist/signup
+---
+2014/08/05 06:28:05 [error] [exception.CException] exception 'CException' with message 'Property "CEmailValidator.0" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\validators\CValidator.php(189): CComponent->__set('0', 'password')
+#1 D:\wamp\www\musicsite\framework\base\CModel.php(287): CValidator::createValidator('email', Object(User), 'name', Array)
+#2 D:\wamp\www\musicsite\framework\base\CModel.php(260): CModel->createValidators()
+#3 D:\wamp\www\musicsite\framework\base\CModel.php(304): CModel->getValidators('name')
+#4 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('name')
+#5 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'name', Array)
+#6 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(23): CActiveForm->labelEx(Object(User), 'name')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#8 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#10 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#11 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(22): CController->render('signup', Array)
+#12 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#13 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#17 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#18 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#20 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#21 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#22 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#23 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#24 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 06:28:22 [error] [exception.CException] exception 'CException' with message 'Property "CEmailValidator.0" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\validators\CValidator.php(189): CComponent->__set('0', 'password')
+#1 D:\wamp\www\musicsite\framework\base\CModel.php(287): CValidator::createValidator('email', Object(User), 'name', Array)
+#2 D:\wamp\www\musicsite\framework\base\CModel.php(260): CModel->createValidators()
+#3 D:\wamp\www\musicsite\framework\base\CModel.php(304): CModel->getValidators('name')
+#4 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('name')
+#5 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'name', Array)
+#6 D:\wamp\www\musicsite\protected\views\front\artist\signup.php(23): CActiveForm->labelEx(Object(User), 'name')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#8 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#10 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('signup', Array, true)
+#11 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(22): CController->render('signup', Array)
+#12 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#13 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#17 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#18 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#20 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#21 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#22 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#23 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#24 {main}
+REQUEST_URI=/musicsite/artist/signup
+---
+2014/08/05 09:37:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'manikanta' for key 'name_UNIQUE'. The SQL statement executed was: INSERT INTO `tbl_user` (`name`, `password`, `email`) VALUES (:yp0, :yp1, :yp2).
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (19)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/05 09:37:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'manikanta' for key 'name_UNIQUE'. The SQL statement executed was: INSERT INTO `tbl_user` (`name`, `password`, `email`) VALUES (:yp0, :yp1, :yp2)' in D:\wamp\www\musicsite\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(19): CActiveRecord->save()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist/signup
+---
+2014/08/05 11:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('login')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/login
+---
+2014/08/05 11:33:16 [error] [exception.CException] exception 'CException' with message 'Property "User.username" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('username')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('username')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(User), 'username')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(User), 'username', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(User), 'username', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\login.php(28): CActiveForm->textField(Object(User), 'username', Array)
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(30): CController->render('login', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/login
+---
+2014/08/05 11:33:33 [error] [exception.CException] exception 'CException' with message 'Property "User.rememberMe" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('rememberMe')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('rememberMe')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1743): CHtml::resolveValue(Object(User), 'rememberMe')
+#3 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(831): CHtml::activeCheckBox(Object(User), 'rememberMe', Array)
+#4 D:\wamp\www\musicsite\protected\views\front\artist\login.php(47): CActiveForm->checkBox(Object(User), 'rememberMe')
+#5 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#7 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(30): CController->render('login', Array)
+#10 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#11 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#16 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#18 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#19 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#20 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#21 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#22 {main}
+REQUEST_URI=/musicsite/artist/login
+---
+2014/08/05 11:44:21 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "login".' in D:\wamp\www\musicsite\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(227): CComponent->__call('login', Array)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): CActiveRecord->__call('login', Array)
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 11:44:59 [error] [exception.CException] exception 'CException' with message 'Property "User._identity" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('_identity')
+#1 D:\wamp\www\musicsite\protected\models\User.php(151): CActiveRecord->__get('_identity')
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 11:45:23 [error] [exception.CException] exception 'CException' with message 'Property "User.username" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('username')
+#1 D:\wamp\www\musicsite\protected\models\User.php(154): CActiveRecord->__get('username')
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 11:46:42 [error] [exception.CException] exception 'CException' with message 'Property "User.username" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('username')
+#1 D:\wamp\www\musicsite\protected\models\User.php(154): CActiveRecord->__get('username')
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 11:47:24 [error] [exception.CException] exception 'CException' with message 'Property "User.username" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('username')
+#1 D:\wamp\www\musicsite\protected\models\User.php(154): CActiveRecord->__get('username')
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 11:50:25 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.usertype" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\protected\components\UserIdentity.php(14): CComponent->__get('usertype')
+#1 D:\wamp\www\musicsite\protected\models\User.php(155): UserIdentity->authenticate()
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 12:09:17 [error] [php] include(Users.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wamp\www\musicsite\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\wamp\www\musicsite\protected\components\UserIdentity.php(32): spl_autoload_call()
+#1 D:\wamp\www\musicsite\protected\models\User.php(155): UserIdentity->authenticate()
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/login
+in D:\wamp\www\musicsite\protected\components\UserIdentity.php (32)
+in D:\wamp\www\musicsite\protected\models\User.php (155)
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (41)
+2014/08/05 12:09:43 [error] [exception.CDbException] exception 'CDbException' with message 'Table "tbl_user" does not have a column named "Status".' in D:\wamp\www\musicsite\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 D:\wamp\www\musicsite\protected\components\UserIdentity.php(32): CActiveRecord->findByAttributes(Array)
+#2 D:\wamp\www\musicsite\protected\models\User.php(155): UserIdentity->authenticate()
+#3 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#4 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#5 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#9 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#10 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#14 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#15 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 12:09:55 [error] [exception.CException] exception 'CException' with message 'Property "User.Password" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Password')
+#1 D:\wamp\www\musicsite\protected\components\UserIdentity.php(35): CActiveRecord->__get('Password')
+#2 D:\wamp\www\musicsite\protected\models\User.php(155): UserIdentity->authenticate()
+#3 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#4 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#5 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#9 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#10 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#12 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#13 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#14 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#15 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#16 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 12:10:08 [error] [exception.CException] exception 'CException' with message 'Property "User.rememberMe" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('rememberMe')
+#1 D:\wamp\www\musicsite\protected\models\User.php(159): CActiveRecord->__get('rememberMe')
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 12:10:57 [error] [exception.CException] exception 'CException' with message 'Property "User.rememberMe" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('rememberMe')
+#1 D:\wamp\www\musicsite\protected\models\User.php(159): CActiveRecord->__get('rememberMe')
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(41): User->login()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/login')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/login
+HTTP_REFERER=http://localhost:8080/musicsite/artist/login
+---
+2014/08/05 12:17:44 [error] [php] Undefined variable: form (D:\wamp\www\musicsite\protected\views\front\artist\login.php:11)
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(869): ArtistController->renderFile()
+#1 D:\wamp\www\musicsite\framework\web\CController.php(782): ArtistController->renderPartial()
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(44): ArtistController->render()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionLogin()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/login
+in D:\wamp\www\musicsite\protected\views\front\artist\login.php (11)
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (44)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+2014/08/05 12:30:40 [error] [php] Object of class UserIdentity could not be converted to string (D:\wamp\www\musicsite\protected\models\User.php:154)
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#2 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#3 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#4 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#9 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#10 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/login
+in D:\wamp\www\musicsite\protected\models\User.php (154)
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (40)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+2014/08/06 05:47:59 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "account".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 05:48:01 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "account".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 05:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/06 05:51:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addtrack".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addtrack')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addtrack')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addtrack')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addtrack
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/06 05:51:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('profile')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/06 05:51:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('profile')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/06 05:55:34 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 05:55:35 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 05:55:35 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 05:55:35 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 06:02:20 [error] [php] Object of class UserIdentity could not be converted to string (D:\wamp\www\musicsite\protected\models\User.php:154)
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#2 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#3 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#4 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#9 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#10 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/login
+in D:\wamp\www\musicsite\protected\models\User.php (154)
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (38)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+2014/08/06 06:08:20 [error] [php] Missing argument 3 for UserIdentity::__construct(), called in D:\wamp\www\musicsite\protected\models\LoginForm.php on line 65 and defined (D:\wamp\www\musicsite\protected\components\UserIdentity.php:12)
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#1 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\wamp\www\musicsite\framework\web\filters\CFilterChain.php(133): SiteController->runAction()
+#3 D:\wamp\www\musicsite\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\wamp\www\musicsite\framework\web\filters\CInlineFilter.php(58): SiteController->filterAccessControl()
+#6 D:\wamp\www\musicsite\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\wamp\www\musicsite\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): SiteController->run()
+#10 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#15 D:\wamp\www\musicsite\admin.php(11): CWebApplication->__call()
+#16 D:\wamp\www\musicsite\admin.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/admin/login
+in D:\wamp\www\musicsite\protected\components\UserIdentity.php (12)
+in D:\wamp\www\musicsite\protected\models\LoginForm.php (65)
+in D:\wamp\www\musicsite\protected\controllers\admin\SiteController.php (91)
+2014/08/06 06:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:11:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:11:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 06:13:58 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 06:14:21 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 06:18:33 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getId" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\auth\CWebUser.php(146): CComponent->__get('getId')
+#1 D:\wamp\www\musicsite\protected\views\front\artist\account.php(5): CWebUser->__get('getId')
+#2 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', NULL, true)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', NULL, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('account', NULL, true)
+#6 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(52): CController->render('account')
+#7 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAccount()
+#8 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('account')
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/account')
+#13 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#16 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#18 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#19 {main}
+REQUEST_URI=/musicsite/artist/account
+---
+2014/08/06 06:27:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:27:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 06:27:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 07:08:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/06 07:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/06 07:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 07:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/06 07:13:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/06 07:13:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/06 07:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/create
+---
+2014/08/06 07:13:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/06 07:13:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/index
+---
+2014/08/06 07:32:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`musicsite`.`tbl_artist`, CONSTRAINT `fk_tbl_artist_tbl_user1` FOREIGN KEY (`userId`) REFERENCES `tbl_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_artist` (`bandName`) VALUES (:yp0).
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (20)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/06 07:32:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`musicsite`.`tbl_artist`, CONSTRAINT `fk_tbl_artist_tbl_user1` FOREIGN KEY (`userId`) REFERENCES `tbl_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_artist` (`bandName`) VALUES (:yp0)' in D:\wamp\www\musicsite\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(20): CActiveRecord->save()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist/signup
+---
+2014/08/06 07:36:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`musicsite`.`tbl_artist`, CONSTRAINT `fk_tbl_artist_tbl_genre1` FOREIGN KEY (`genreId`) REFERENCES `tbl_genre` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_artist` (`bandName`, `userId`) VALUES (:yp0, :yp1).
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (21)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/06 07:36:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`musicsite`.`tbl_artist`, CONSTRAINT `fk_tbl_artist_tbl_genre1` FOREIGN KEY (`genreId`) REFERENCES `tbl_genre` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_artist` (`bandName`, `userId`) VALUES (:yp0, :yp1)' in D:\wamp\www\musicsite\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(21): CActiveRecord->save()
+#3 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionSignup()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('signup')
+#8 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/signup')
+#9 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#12 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#14 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#15 {main}
+REQUEST_URI=/musicsite/artist/signup
+HTTP_REFERER=http://localhost:8080/musicsite/artist/signup
+---
+2014/08/06 09:51:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('profile')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/profile
+HTTP_REFERER=http://localhost:8080/musicsite/artist/
+---
+2014/08/06 09:53:04 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "profile".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(62): CController->render('profile')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/06 09:55:54 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "profile".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('profile', Array, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(79): CController->render('profile', Array)
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/06 10:44:46 [error] [exception.CException] exception 'CException' with message 'ArtistController and its behaviors do not have a method or closure named "loadModel".' in D:\wamp\www\musicsite\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(63): CComponent->__call('loadModel', Array)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(63): ArtistController->loadModel('1')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/profile
+HTTP_REFERER=http://localhost:8080/musicsite/artist/profile
+---
+2014/08/06 10:48:12 [error] [php] include(Artists.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wamp\www\musicsite\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(64): spl_autoload_call()
+#1 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#2 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#4 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#5 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#11 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#12 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/profile
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (64)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/06 11:14:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/08 05:45:29 [error] [php] Missing argument 1 for CActiveRecord::findByPk(), called in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php on line 61 and defined (D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php:1481)
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#2 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#3 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#4 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#9 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#10 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/profile
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (61)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 05:58:54 [error] [exception.CException] exception 'CException' with message 'Property "Artist.scenerio" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(161): CComponent->__set('scenerio', 'update')
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(62): CActiveRecord->__set('scenerio', 'update')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/08 06:06:17 [error] [exception.CException] exception 'CException' with message 'Property "User.website" is not defined.' in D:\wamp\www\musicsite\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(145): CComponent->__get('website')
+#1 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('website')
+#2 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(User), 'website')
+#3 D:\wamp\www\musicsite\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(User), 'website', Array)
+#4 D:\wamp\www\musicsite\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(User), 'website', Array)
+#5 D:\wamp\www\musicsite\protected\views\front\artist\profile.php(42): CActiveForm->textField(Object(User), 'website')
+#6 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#7 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#8 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#9 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('profile', Array, true)
+#10 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(81): CController->render('profile', Array)
+#11 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#12 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#16 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#17 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#20 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#22 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#23 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/08 12:24:14 [error] [exception.CException] exception 'CException' with message 'Artist and its behaviors do not have a method or closure named "textField".' in D:\wamp\www\musicsite\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\db\ar\CActiveRecord.php(227): CComponent->__call('textField', Array)
+#1 D:\wamp\www\musicsite\protected\views\front\artist\profile.php(116): CActiveRecord->__call('textField', Array)
+#2 D:\wamp\www\musicsite\protected\views\front\artist\profile.php(116): Artist->textField(Object(Artist), 'taxPercent')
+#3 D:\wamp\www\musicsite\framework\web\CBaseController.php(126): require('D:\wamp\www\mus...')
+#4 D:\wamp\www\musicsite\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\mus...', Array, true)
+#5 D:\wamp\www\musicsite\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\mus...', Array, true)
+#6 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('profile', Array, true)
+#7 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(81): CController->render('profile', Array)
+#8 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionProfile()
+#9 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('profile')
+#13 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/profile')
+#14 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#17 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#19 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#20 {main}
+REQUEST_URI=/musicsite/artist/profile
+---
+2014/08/08 12:37:04 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:37:04 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:37:04 [error] [php] Undefined index: user (D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php:75)
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(286): ArtistController->runAction()
+#1 D:\wamp\www\musicsite\framework\web\CController.php(265): ArtistController->runActionWithFilters()
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): ArtistController->run()
+#3 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array()
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->__call()
+#9 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/musicsite/artist/profile
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (75)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:37:05 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:37:05 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:39:36 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:39:36 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:39:38 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:39:38 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:00 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:00 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:00 [warning] [application] Failed to set unsafe attribute "albumUrl" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:00 [warning] [application] Failed to set unsafe attribute "albumDescription" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:54 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:54 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:54 [warning] [application] Failed to set unsafe attribute "albumUrl" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:54 [warning] [application] Failed to set unsafe attribute "albumDescription" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (69)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:56 [warning] [application] Failed to set unsafe attribute "returnPolicy" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:56 [warning] [application] Failed to set unsafe attribute "shippingInfo" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:56 [warning] [application] Failed to set unsafe attribute "albumUrl" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)
+2014/08/08 12:41:56 [warning] [application] Failed to set unsafe attribute "albumDescription" of "Artist".
+in D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php (74)
+in D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php (26)
+in D:\wamp\www\musicsite\index.php (11)

@@ -15,7 +15,6 @@ $this->breadcrumbs = array(
             'validateOnSubmit'=>true,
         ),
     )); ?>
-    <?php echo $form->errorSummary($model); ?>
 <p>
     Enter username and password to continue.
 </p>

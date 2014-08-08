@@ -155,7 +155,6 @@ class User extends CActiveRecord
 		{
 			$this->_identity=new UserIdentity($this->name,$this->password,'user');
 			$this->_identity->authenticate();
-			echo "Hello";
 		}
 		else
 			return false;

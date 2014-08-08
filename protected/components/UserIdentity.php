@@ -39,6 +39,7 @@ class UserIdentity extends CUserIdentity
 				$this->errorCode=self::ERROR_PASSWORD_INVALID;
 			else
 			{
+				Yii::app()->session['userid'] = $record->id;
 				$this->_id=$record->id;
 				$this->errorCode=self::ERROR_NONE;
 			}
