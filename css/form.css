@@ -58,11 +58,17 @@ div.form label
 	font-weight: bold;
 	font-size: 0.9em;
 	display: block;
+	float:left;
+	width:150px;
+	padding:5px 0 0 0;
+	text-align:right;
+	padding-right:25px;
 }
 
 div.form .row
 {
 	margin: 5px 0;
+	clear:both;
 }
 
 div.form .hint
@@ -87,6 +93,9 @@ div.form label.error,
 div.form span.error
 {
 	color: #C00;
+	float:left;
+	width:150px;
+	padding:5px 0 0 0;
 }
 
 div.form div.error input,
@@ -98,6 +107,8 @@ div.form select.error
 {
 	background: #FEE;
 	border-color: #C00;
+	float:left;
+	margin-right:25px;
 }
 
 div.form div.success input,
@@ -129,6 +140,7 @@ div.form .errorMessage
 {
 	color: red;
 	font-size: 0.9em;
+	padding:5px 0 0 0;
 }
 
 div.form .errorSummary p
