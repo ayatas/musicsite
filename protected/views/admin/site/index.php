@@ -2,6 +2,9 @@
 /* @var $this SiteController */
 
 $this->pageTitle = Yii::app()->name;
+$this->breadcrumbs=array(
+    'Dashboard'
+);
 ?>
 
 <div class="row-fluid">

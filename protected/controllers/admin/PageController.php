@@ -13,9 +13,8 @@ class PageController extends Controller
 	 */
 	public function filters()
 	{
-		return array(
+		return array(	
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -32,12 +31,8 @@ class PageController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin','delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -70,15 +65,20 @@ class PageController extends Controller
 		if(isset($_POST['Page']))
 		{
 			$model->attributes=$_POST['Page'];
+			$model->slug = $this->createSlug($_POST['Page']['title']);
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
 		));
 	}
-
+	public function actionTest()
+	{
+		echo "Hello";
+		exit;
+	}
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -94,15 +94,16 @@ class PageController extends Controller
 		if(isset($_POST['Page']))
 		{
 			$model->attributes=$_POST['Page'];
+			$model->slug = $this->createSlug($_POST['Page']['title']);
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
 		));
 	}
-
+	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -111,10 +112,18 @@ class PageController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	}
+	
+	public function createSlug($slug) {
+    	$lettersNumbersSpacesHyphens = '/[^\-\s\pN\pL]+/u';
+	    $spacesDuplicateHypens = '/[\-\s]+/';
+    	$slug = preg_replace($lettersNumbersSpacesHyphens, '', $slug);
+	    $slug = preg_replace($spacesDuplicateHypens, '-', $slug);
+	    $slug = trim($slug, '-');
+    	return mb_strtolower($slug, 'UTF-8');
 	}
 
 	/**

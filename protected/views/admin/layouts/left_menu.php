@@ -8,23 +8,42 @@ $this->widget('zii.widgets.CMenu', array(
 			'label' => '<i class="icon icon-home"></i><span>Dashboard</span>',
 			'url' => array('/site/index')
 		),
-
 		array(
-			'label' => '<i class="icon icon-file"></i><span>Pages</span><!--<span class="label">2</span>-->',
+		'label'=>'<i class="icon icon-user"></i><span>Artist Users</span>',
+		'url' => array('#'),
+		'itemOptions' => array('class' => 'submenu'),
+		'items' => array(
+			array(
+				'label' => '<i class="icon icon-pencil"></i>Manage User',
+				'url' => array('user/admin')
+			),
+			array(
+				'label' => '<i class="icon icon-plus"></i>Add User',
+				'url' => array('user/create')
+			),
+			array(
+					'label' => 'Update',
+					'url' => array('user/update'),
+					'itemOptions' => array('class' => 'hide')
+				),
+		),
+		),
+		array(
+			'label' => '<i class="icon icon-file"></i><span>Pages</span>',
 			'url' => array('#'),
 			'itemOptions' => array('class' => 'submenu'),
 			'items' => array(
 				array(
-					'label' => 'All Pages',
-					'url' => array('page/index')
+					'label' => '<i class="icon icon-pencil"></i>Manage Pages',
+					'url' => array('page/admin')
 				),
 				array(
-					'label' => 'Create Page',
+					'label' => '<i class="icon icon-plus"></i>Create Page',
 					'url' => array('page/create')
 				),
 				array(
 					'label' => '',
-					'url' => array('#'),
+					'url' => array('page/update'),
 					'itemOptions' => array('class' => 'hide')
 				),
 				array(

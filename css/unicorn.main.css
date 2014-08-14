@@ -10,6 +10,7 @@
 body {
 	overflow-x: hidden;
     margin-top: -9px;
+	background:url(../images/texture.png) repeat;
 }
 a:hover {
 	text-decoration: none;
@@ -24,15 +25,16 @@ a:hover {
 }
 
 #header h1 {
-  /*  background: url("../images/logo.png") no-repeat scroll 0 0 transparent;*/
- /*   height: 31px;*/
+    background: url("../images/logo.png") no-repeat scroll 0 0 transparent;
+   /* height: 31px;*/
     left: 15px;
-    /*line-height: 600px;*/
+    line-height: 600px;
     overflow: hidden;
     position: relative;
-    top: 24px;
-    width: 191px;
-	font-size:22px;
+	display:block;
+    top: 10px;
+   /* width: 191px;*/
+	font-size:0px;
 }
 
 #header h1 a {
@@ -74,7 +76,7 @@ a:hover {
 #user-nav {
     position: absolute;
     right: 30px;
-    top: 5px;
+    top: 21px;
     z-index: 20;
     margin: 0;
 }
@@ -105,7 +107,7 @@ a:hover {
 	vertical-align: top;
 	background-image: url('../images/glyphicons-halflings-white.png');
 	opacity: .5;
-	margin-top: 2px;
+	margin: 2px 10px 0 0;
 }
 #user-nav > ul > li > a:hover > i, #user-nav > ul > li.open > a > i {
 	opacity: 1;
@@ -139,7 +141,7 @@ a:hover {
 
 #sidebar > ul {
 	list-style: none;
-	margin: 10px 0 0;
+	margin: 0 0 0;
 	padding: 0;
 	position: absolute;
 	width: 220px;
@@ -208,7 +210,7 @@ a:hover {
     min-height: 500px;
     width: auto;
     -webkit-background-clip: padding-box;
-    border-top-left-radius: 8px;
+   /* border-top-left-radius: 8px;*/
 }
 
 #content-header {
@@ -219,27 +221,28 @@ a:hover {
     background-image: -o-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
     background-image: linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
     border-top-left-radius: 8px;
-    min-height: 80px; /*FIX: Use MIN-height... Allow header to get bigger for larger content (such as the h1) */
+    min-height: 44px; /*FIX: Use MIN-height... Allow header to get bigger for larger content (such as the h1) */
     /*position: absolute; FIX: This breaks layout significantly when spelled correctly*/
     padding-top: 5px; /*FIX: Allows h1 to not have to be absolutely positioned and control it's parent's height*/
     width: 100%;
-    margin-top: -38px;
+  /*  margin-top: -38px;*/
     z-index: 20;
 }
  
 #content-header h1 {
     color: #555555;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: normal;
     /*float: left; FIX: Keep h1 in DOM flow. Fixes weird layout problems with long text/no absolute positioned parent... */
     text-shadow: 0 1px 0 #ffffff;
     margin-left: 20px;
+	line-height:normal;
     /*position: absolute; FIX: Allow h1 to flow correctly with width changes, keep in DOM flow*/
 }
  
 /* FIX: The following two items were reordered to allow .btn-group to override margin top! */
 #content-header h1, #content-header .btn-group {
-    margin-top: 20px;
+/*    margin-top: 20px;*/
 }
  
 #content-header .btn-group {
@@ -263,10 +266,10 @@ a:hover {
 }
 /* Breadcrumb */
 #breadcrumb {
-	background-color: #e5e5e5;
+	background-color: #246374;
 	box-shadow: 0 0 1px #ffffff;
-	border-top: 1px solid #d6d6d6;
-	border-bottom: 1px solid #d6d6d6;
+	border-top: 1px solid #102d35;
+	border-bottom: 1px solid #102d35;
 	padding-left: 10px;
 }
 #breadcrumb a {
@@ -276,7 +279,8 @@ a:hover {
 	background-position: center right;
 	background-repeat: no-repeat;
 	font-size: 11px;
-	color: #666666;
+/*	color: #666666;*/
+	color:#aaaaaa;
 }
 #breadcrumb a:hover {
 	color: #333333;
@@ -286,7 +290,7 @@ a:hover {
 }
 #breadcrumb a.current {
 	font-weight: bold;
-	color: #444444;
+	color: #FFF;
 }
 #breadcrumb a i {
 	margin-right: 5px;

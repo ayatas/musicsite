@@ -8,13 +8,14 @@ html, body {
     overflow: hidden;
 }
 body {
-    background-color: #444444;
+    /*background-color: #444444;
     background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#555555), to(#111111));
     background-image: -webkit-linear-gradient(top, #555555 0%, #111111 100%);
     background-image: -moz-linear-gradient(top, #555555 0%, #111111 100%);
     background-image: -ms-linear-gradient(top, #555555 0%, #111111 100%);
     background-image: -o-linear-gradient(top, #555555 0%, #111111 100%);
-    background-image: linear-gradient(top, #555555 0%, #111111 100%);
+    background-image: linear-gradient(top, #555555 0%, #111111 100%);*/
+	background:url(../images/texture.png) repeat;
     padding: 0;
     margin: 0;
 }

@@ -55,7 +55,7 @@ class Artist extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('userId,url,bandName,fanEmail,shoFanEmail,paypalEmail,genreId', 'required','on'=>'update'),
-			array('bandName,userId', 'required','on'=>'create'),
+			array('bandName,userId', 'required','on'=>'create,adminUpdate,adminUpdate'),
 			array('userId, genreId, yourLocation, taxPercent', 'numerical', 'integerOnly'=>true),
 			array('bandName, url, fanEmail, genreTags, paypalEmail, currency, customHeader', 'length', 'max'=>45),
 			array('shoFanEmail, showNavigation, showSocial, homePage, upcomingShows', 'length', 'max'=>1),
