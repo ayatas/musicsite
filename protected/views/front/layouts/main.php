@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/edittrack.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -32,6 +32,7 @@
 				array('label'=>'Fan Signup', 'url'=>array('/site'), 'visible'=>Yii::app()->session['userid']==""),	
 				array('label'=>'Login', 'url'=>array('/artist/login'), 'visible'=>Yii::app()->session['userid']==""),
 				array('label'=>'Profile', 'url'=>array('/artist/profile'), 'visible'=>Yii::app()->session['userid']!=""),
+				array('label'=>'My Site', 'url'=>array('/artist/account'), 'visible'=>Yii::app()->session['userid']!=""),
 				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>Yii::app()->session['userid']!="")
 			),
 		)); 

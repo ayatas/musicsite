@@ -84,4 +84,12 @@ class ArtistController extends Controller
 		}
 		$this->render('profile',array('model'=>$model,'model1'=>$model1));
 	}
+	public function actionAddalbum()
+	{
+		$this->render('addalbum');
+	}
+	public function actionAddtrack()
+	{
+		$this->render('addtrack');
+	}
 }
