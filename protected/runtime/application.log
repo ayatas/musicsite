@@ -28476,3 +28476,279 @@ REQUEST_URI=/musicsite/artist/login
 HTTP_REFERER=http://localhost/musicsite/artist
 >>>>>>> 6d508118fa38dfa50533d99f247423683494c905
 ---
+2014/08/14 09:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/14 09:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/
+---
+2014/08/14 09:49:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/create
+---
+2014/08/14 09:49:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/admin
+---
+2014/08/14 09:49:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.ui.custom.js".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.ui.cu...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/js/jquery.ui.custom.js
+HTTP_REFERER=http://localhost:8080/musicsite/admin/page/admin
+---
+2014/08/14 09:50:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 09:56:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 09:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 09:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 09:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 09:57:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addalbum')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 10:08:45 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('addalbum', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(89): CController->render('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAddalbum()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 10:08:45 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('addalbum', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(89): CController->render('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAddalbum()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 10:08:46 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('addalbum', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(89): CController->render('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAddalbum()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/14 10:08:46 [error] [exception.CException] exception 'CException' with message 'ArtistController cannot find the requested view "addalbum".' in D:\wamp\www\musicsite\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(782): CController->renderPartial('addalbum', NULL, true)
+#1 D:\wamp\www\musicsite\protected\controllers\front\ArtistController.php(89): CController->render('addalbum')
+#2 D:\wamp\www\musicsite\framework\web\actions\CInlineAction.php(49): ArtistController->actionAddalbum()
+#3 D:\wamp\www\musicsite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\musicsite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\musicsite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addalbum')
+#7 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addalbum')
+#8 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#11 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#13 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#14 {main}
+REQUEST_URI=/musicsite/artist/addalbum
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
+2014/08/15 06:32:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/addalbum.css".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('css/addalbum.cs...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/css/addalbum.css
+HTTP_REFERER=http://localhost:8080/musicsite/artist/addalbum
+---
+2014/08/15 06:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/addalbum.css".' in D:\wamp\www\musicsite\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('css/addalbum.cs...')
+#1 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/musicsite/css/addalbum.css
+HTTP_REFERER=http://localhost:8080/musicsite/artist/addalbum
+---
+2014/08/15 07:34:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addtrack".' in D:\wamp\www\musicsite\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\musicsite\framework\web\CController.php(270): CController->missingAction('addtrack')
+#1 D:\wamp\www\musicsite\framework\web\CWebApplication.php(282): CController->run('addtrack')
+#2 D:\wamp\www\musicsite\framework\web\CWebApplication.php(141): CWebApplication->runController('artist/addtrack')
+#3 D:\wamp\www\musicsite\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\musicsite\protected\components\WebApplicationEndBehavior.php(26): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#6 D:\wamp\www\musicsite\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 D:\wamp\www\musicsite\index.php(11): CComponent->__call('runEnd', Array)
+#8 D:\wamp\www\musicsite\index.php(11): CWebApplication->runEnd('front')
+#9 {main}
+REQUEST_URI=/musicsite/artist/addtrack
+HTTP_REFERER=http://localhost:8080/musicsite/artist/account
+---
