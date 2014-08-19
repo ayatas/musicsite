@@ -55,4 +55,5 @@ $this->breadcrumbs = array(
         <?php echo CHtml::submitButton('Login',array('class'=>'btn btn-inverse')); ?>
     </span>
 </div>
+<?php echo $form->hiddenField($model,'userRole',array('value' =>'admin')); ?>
 <?php $this->endWidget(); ?>

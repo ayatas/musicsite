@@ -7,20 +7,22 @@
  * @property integer $id
  * @property integer $artistId
  * @property string $name
+ * @property string $releaseDate
  * @property string $price
  * @property string $payMore
+ * @property string $downLoadDescription
  * @property string $image
  * @property string $artist
  * @property string $description
  * @property string $credits
  * @property string $tags
  * @property string $upc_ean
+ * @property string $visibility
  * @property string $createdDate
  * @property string $updatedDate
  * @property string $status
  *
  * The followings are the available model relations:
- * @property Artist $artist0
  * @property Tarcks[] $tarcks
  * @property Tarcks[] $tarcks1
  */
@@ -42,14 +44,14 @@ class Albums extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('artistId', 'required'),
+			array('artistId, name', 'required'),
 			array('artistId', 'numerical', 'integerOnly'=>true),
 			array('name, price, image, artist, tags, upc_ean', 'length', 'max'=>45),
-			array('payMore, status', 'length', 'max'=>1),
-			array('description, credits, createdDate, updatedDate', 'safe'),
+			array('payMore, visibility, status', 'length', 'max'=>1),
+			array('description, releaseDate, credits, downLoadDescription, createdDate, updatedDate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, artistId, name, price, payMore, image, artist, description, credits, tags, upc_ean, createdDate, updatedDate, status', 'safe', 'on'=>'search'),
+			array('id, artistId, name, releaseDate, price, payMore, image, downLoadDescription, artist, description, credits, tags, upc_ean, visibility, createdDate, updatedDate, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +63,6 @@ class Albums extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'artist0' => array(self::BELONGS_TO, 'Artist', 'artistId'),
 			'tarcks' => array(self::HAS_MANY, 'Tarcks', 'albumId'),
 			'tarcks1' => array(self::HAS_MANY, 'Tarcks', 'artistId'),
 		);
@@ -75,15 +76,18 @@ class Albums extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'artistId' => 'Artist',
-			'name' => 'Name',
-			'price' => 'Price',
+			'name' => 'Album Title',
+			'releaseDate' => 'release date',
+			'price' => 'pricing',
 			'payMore' => 'Pay More',
+			'downLoadDescription' => 'Down Load Description',
 			'image' => 'Image',
-			'artist' => 'Artist',
-			'description' => 'Description',
-			'credits' => 'Credits',
-			'tags' => 'Tags',
-			'upc_ean' => 'Upc Ean',
+			'artist' => 'artist',
+			'description' => 'about this album',
+			'credits' => 'album credits',
+			'tags' => 'tags',
+			'upc_ean' => 'album UPC/EAN code',
+			'visibility' => 'Visibility',
 			'createdDate' => 'Created Date',
 			'updatedDate' => 'Updated Date',
 			'status' => 'Status',
@@ -111,8 +115,10 @@ class Albums extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('artistId',$this->artistId);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('releaseDate',$this->releaseDate,true);
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('payMore',$this->payMore,true);
+		$criteria->compare('downLoadDescription',$this->downLoadDescription,true);
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('artist',$this->artist,true);
 		$criteria->compare('description',$this->description,true);

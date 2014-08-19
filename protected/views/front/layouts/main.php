@@ -4,6 +4,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
+    
+    
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
+
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
@@ -28,12 +32,12 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Artist Signup', 'url'=>array('/artist/index'),'visible'=>Yii::app()->session['userid']==""),
-				array('label'=>'Fan Signup', 'url'=>array('/site'), 'visible'=>Yii::app()->session['userid']==""),	
-				array('label'=>'Login', 'url'=>array('/artist/login'), 'visible'=>Yii::app()->session['userid']==""),
-				array('label'=>'Profile', 'url'=>array('/artist/profile'), 'visible'=>Yii::app()->session['userid']!=""),
-				array('label'=>'My Site', 'url'=>array('/artist/account'), 'visible'=>Yii::app()->session['userid']!=""),
-				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>Yii::app()->session['userid']!="")
+				array('label'=>'Artist Signup', 'url'=>array('/artist/index'),'visible'=>Yii::app()->user->getId()==""),
+				array('label'=>'Fan Signup', 'url'=>array('/site'), 'visible'=>Yii::app()->user->getId()==""),	
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->getId()==""),
+				array('label'=>'Profile', 'url'=>array('/artist/profile'), 'visible'=>Yii::app()->user->getId()!=""),
+				array('label'=>'My Site', 'url'=>array('/artist/account'), 'visible'=>Yii::app()->user->getId()!=""),
+				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>Yii::app()->user->getId()!="")
 			),
 		)); 
 		?>

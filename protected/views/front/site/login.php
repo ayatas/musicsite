@@ -22,8 +22,7 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+	<p class="note">Fields with <span class="required">*</span> are required.</p>	    
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
@@ -44,10 +43,9 @@ $this->breadcrumbs=array(
 		<?php echo $form->label($model,'rememberMe'); ?>
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
-
+    <?php echo $form->hiddenField($model,'userRole',array('value' =>'user')); ?>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
-
 <?php $this->endWidget(); ?>
 </div><!-- form -->
