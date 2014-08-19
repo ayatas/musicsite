@@ -1,0 +1,1612 @@
+form
+{
+	 background:#f7f7f7;
+	 min-height:2000px;
+	 position:relative;
+	 left:-20px;
+	 top:16px;
+}
+.edit-tralbum, .edit-tralbum input {
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+.edit-tralbum {
+    color: #333;
+}
+.edit-tralbum #pgBd {
+    margin-bottom: 0;
+    padding-bottom: 8em;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 935px;
+}
+.edit-tralbum #pgBd.loaded {
+    background: url("/img/edit-tralbum-bg-20120404.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+}
+#edit-tralbum-form > div.top-spacer {
+    background: url("/img/edit-tralbum-bg-top-20120404.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+    height: 22px;
+    margin-left: -20px;
+    margin-top: -35px;
+    padding: 0;
+    width: 975px;
+}
+#edit-tralbum-form > div {
+    padding: 20px 0 20px 10px;
+    width: 456px;
+}
+#edit-tralbum-form.hidden-while-loading {
+    display: none;
+}
+#edit-tralbum-form > div.album, #edit-tralbum-form > div.track {
+    padding: 0;
+    width: 466px;
+}
+#edit-tralbum-form > div.tracks {
+    padding: 20px 0 20px 10px;
+    width: 456px;
+}
+#edit-tralbum-form h3 {
+    clear: left;
+    color: #808080;
+    font-size: 11px;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+}
+#edit-tralbum-form h3 .controlHint {
+    color: #a0a0a0;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 10px;
+    text-transform: none;
+}
+#edit-tralbum-form h4 {
+    color: #aaa;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+#edit-tralbum-form a.error, .invalid {
+    color: #e00;
+    width: 94%;
+}
+#edit-tralbum-form > .bottom-border {
+    background-image: url("/img/grooved-horizontal-border.png");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+#edit-tralbum-form > .top-border.selectable {
+    border-top: 1px solid #e7e7e7;
+}
+#edit-tralbum-form > .top-border.selectable.selected {
+    border-top: 0 none;
+}
+#edit-tralbum-form > .top-border.selectable .left-panel-container {
+    border-top: 1px solid #fff;
+}
+#edit-tralbum-form .selectable div.right-panel {
+    display: none;
+}
+#edit-tralbum-form .selectable.selected div.right-panel {
+    display: block;
+}
+#edit-tralbum-form .selectable, #edit-tralbum-form album.selectable, #edit-tralbum-form .package_wrapper {
+    padding: 0;
+}
+#edit-tralbum-form .selectable .left-panel-container {
+    border-left: 1px solid #f7f7f7;
+}
+#edit-tralbum-form .selectable.selected .left-panel-container {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    border-left-color: #0687f5;
+    border-top: 1px solid #dbdbdb;
+}
+#edit-tralbum-form .album.selectable .left-panel-container, #edit-tralbum-form .track.single.selectable .left-panel-container {
+    padding: 9px 0 11px 10px;
+    width: 455px;
+}
+#edit-tralbum-form .album.selectable.selected .left-panel-container, #edit-tralbum-form .track.selectable.selected .left-panel-container {
+    padding: 10px 1px 10px 10px;
+}
+#edit-tralbum-form .tracks .track.selectable .left-panel-container, #edit-tralbum-form .package_wrapper .left-panel-container {
+    background-image: url("/img/navbar-border.png");
+    background-position: left top;
+    background-repeat: repeat-x;
+    padding: 11px 0 11px 10px;
+}
+#edit-tralbum-form .tracks .track.selectable.selected .left-panel-container, #edit-tralbum-form .package_wrapper.selectable.selected .left-panel-container {
+    background-image: none;
+    padding: 10px 1px 10px 10px;
+    width: 445px;
+}
+#edit-tralbum-form .selectable.has-error .left-panel-container {
+    border-left-color: #e00;
+}
+#edit-tralbum-form .selectable .left-panel-container:hover {
+    background-color: #fcfcfc;
+    cursor: pointer;
+}
+#edit-tralbum-form .selectable.selected .left-panel-container:hover {
+    background-color: #fff;
+}
+#edit-tralbum-form .top-border.selectable .left-panel-container:hover {
+    background: url("/img/grooved-horizontal-border.png") repeat-x scroll left bottom #fcfcfc;
+}
+#edit-tralbum-form .top-border.selectable.selected .left-panel-container:hover {
+    background: none repeat scroll 0 0 #fff;
+}
+.alert {
+    font-size: 12px;
+    font-weight: normal;
+}
+label.disabled {
+    color: #aaa;
+}
+#edit-tralbum-form div.left-panel {
+    margin: 0;
+}
+#edit-tralbum-form .track.single div.left-panel, #edit-tralbum-form .album div.left-panel {
+    overflow: auto;
+}
+#edit-tralbum-form div.left-panel .album-title-artist {
+    float: left;
+    width: 360px;
+}
+#edit-tralbum-form .left-panel .art {
+    float: left;
+    margin-right: 10px;
+    width: 72px;
+}
+#edit-tralbum-form .left-panel .art > img {
+    display: none;
+}
+#edit-tralbum-form .left-panel .art.has-art > img {
+    border: 1px solid #ccc;
+    display: block;
+    height: 70px;
+    width: 70px;
+}
+#edit-tralbum-form .left-panel .art > div.blank {
+    border: 1px dashed #ccc;
+    height: 70px;
+    width: 70px;
+}
+#edit-tralbum-form .left-panel .art.has-art > div.blank {
+    display: none;
+}
+#edit-tralbum-form div.left-panel p.title {
+    color: #363636;
+    font-size: 20px;
+    margin: 0;
+}
+#edit-tralbum-form div.left-panel p.by {
+    color: #363636;
+    font-size: 11px;
+    margin: 0 0 3px;
+}
+#edit-tralbum-form div.left-panel p.by > .artist {
+    font-weight: bold;
+}
+#edit-tralbum-form div.left-panel p.release-date {
+    color: #999;
+    font-size: 11px;
+    margin: 0 0 3px;
+}
+#edit-tralbum-form .controlHint {
+    color: #909090;
+    font-size: 12px;
+}
+#edit-tralbum-form .edit-track-audio {
+    padding: 20px 0 0 10px;
+    width: 457px;
+}
+#item-order {
+    border-top: 1px dotted #aaa;
+    list-style: none outside none;
+    margin-left: 20px;
+    padding: 0;
+    width: 250px;
+}
+#item-order > li {
+    border-bottom: 1px dotted #aaa;
+    cursor: move;
+    margin: 0;
+    padding: 2px 0 2px 10px;
+    text-overflow: ellipsis;
+}
+#edit-tralbum-form ol.tracks {
+    counter-reset: track-list;
+    padding: 0;
+	list-style:none;
+	
+}
+#edit-tralbum-form ol.packages {
+    counter-reset: package-list;
+    list-style: none outside none;
+    padding: 0;
+}
+#edit-tralbum-form .deleted-tracks, #edit-tralbum-form .deleted-packages {
+    display: none;
+}
+#edit-tralbum-form .packages .images .important {
+    background-color: #fffdea;
+    border: 1px solid #fef58d;
+    font-weight: bold;
+    padding: 5px;
+    width: 368px;
+}
+#edit-tralbum-form .packages .images .controlTip.default {
+    margin-left: 35px;
+}
+#edit-tralbum-form .packages .images .controlTip.default .bc-ui {
+    background-position: 50px 50px;
+    display: inline-block;
+    height: 20px;
+    vertical-align: bottom;
+    width: 15px;
+}
+#edit-tralbum-form .packages .images .controlTip.size {
+    margin-left: 50px;
+}
+#edit-tralbum-form .packages div.left-panel div.art {
+    width: 47px;
+}
+#edit-tralbum-form .packages div.left-panel div.art > * {
+    height: 36px;
+    width: 48px;
+}
+#edit-tralbum-form .left-panel .drag-thumb {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 23px;
+}
+#edit-tralbum-form .left-panel .drag-thumb:hover span {
+    background-position: -12px -34px;
+}
+#edit-tralbum-form .left-panel .drag-thumb span {
+    background-position: 0 -34px;
+    display: inline-block;
+    height: 10px;
+    left: 4px;
+    position: relative;
+    text-indent: -999em;
+    top: 5px;
+    width: 12px;
+}
+#edit-tralbum-form .left-panel-container:hover .left-panel .drag-thumb {
+    cursor: move;
+    visibility: visible;
+}
+#edit-tralbum-form .track .featured-star {
+    background-position: -18px -17px;
+    cursor: pointer;
+    height: 17px;
+    left: 24px;
+    position: absolute;
+    text-indent: -9999px;
+    visibility: hidden;
+    width: 18px;
+}
+#edit-tralbum-form .track.streaming-enabled.has-audio .featured-star {
+    visibility: visible;
+}
+#edit-tralbum-form .track.streaming-enabled.has-audio.private .featured-star, #edit-tralbum-form.is-preorder .track.streaming-enabled.has-audio .featured-star, #edit-tralbum-form.is-preorder .track.streaming-enabled.has-audio.include-in-preorder.private .featured-star {
+    visibility: hidden;
+}
+#edit-tralbum-form.is-preorder .track.streaming-enabled.has-audio.include-in-preorder .featured-star {
+    visibility: visible;
+}
+#edit-tralbum-form .track .featured-star:hover {
+    background-position: -36px -17px;
+}
+#edit-tralbum-form .track.featured .featured-star {
+    background-position: 0 -17px;
+}
+#edit-tralbum-form .track .featured-note {
+    display: none;
+}
+#edit-tralbum-form .track.featured .featured-note {
+    color: #07b92b;
+    display: block;
+    font-size: 11px;
+    margin: 0 0 5px;
+    padding: 0 10px 0 0;
+}
+#edit-tralbum-form .left-panel .delete {
+    cursor: pointer;
+    float: right;
+    height: 20px;
+    margin: 0 12px 0 5px;
+    width: 20px;
+}
+#edit-tralbum-form .left-panel .delete:hover {
+    background-color: #eee;
+}
+#edit-tralbum-form .left-panel .delete span {
+    background-position: 0 -44px;
+    display: inline-block;
+    height: 9px;
+    left: 6px;
+    position: relative;
+    text-indent: -9999px;
+    top: 6px;
+    width: 9px;
+}
+#edit-tralbum-form .summary {
+    color: #939393;
+    font-size: 11px;
+}
+#edit-tralbum-form .summary ul {
+    display: inline-block;
+    list-style: none outside none;
+    padding: 0;
+}
+#edit-tralbum-form .summary ul > li {
+    display: inline;
+    margin: 0;
+}
+#edit-tralbum-form .summary ul > li:after {
+    content: ",";
+}
+#edit-tralbum-form .summary ul > li.last-child:after {
+    content: normal;
+}
+#edit-tralbum-form .summary ul > li:last-child:after {
+    content: normal;
+}
+#edit-tralbum-form .summary ul > li.private {
+    color: #f00;
+}
+#edit-tralbum-form .summary ul > li.subscriber-only {
+    color: #f00;
+}
+#edit-tralbum-form .summary .subscription-bonus-item {
+    color: #363636;
+    margin: 2px 0 0;
+}
+#edit-tralbum-form .summary .during-preorder {
+    display: none;
+}
+#edit-tralbum-form.is-preorder .summary .during-preorder {
+    color: #4bbef2;
+    display: block;
+    margin: 3px 0 0;
+}
+#edit-tralbum-form .tracks .left-panel .info, #edit-tralbum-form .packages .left-panel .info {
+    overflow: hidden;
+    padding-left: 72px;
+    position: relative;
+}
+#edit-tralbum-form ol.tracks .left-panel p.title:before {
+    color: #999;
+    content: counter(track-list, decimal);
+    counter-increment: track-list;
+    display: inline-block;
+    font-size: 15px;
+    margin-left: -32px;
+    margin-right: 9px;
+    text-align: right;
+    width: 23px;
+}
+#edit-tralbum-form .package-counter-holder:before {
+    color: #999;
+    content: counter(package-list, decimal);
+    counter-increment: package-list;
+    float: left;
+    font-size: 15px;
+    margin-left: -32px;
+    margin-right: 9px;
+    text-align: right;
+    width: 23px;
+}
+#edit-tralbum-form ol.tracks .left-panel p.title, #edit-tralbum-form ol.packages .left-panel p.title {
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+#edit-tralbum-form ol.tracks .left-panel, #edit-tralbum-form ol.packages .left-panel {
+    margin: 0;
+    padding: 0;
+}
+#edit-tralbum-form ol > li.selected .left-panel {
+    background-image: none;
+}
+#edit-tralbum-form ol > li.selected + li .left-panel-container, #edit-tralbum-form ol > li.selected + li:hover .left-panel-container {
+    background-image: none !important;
+}
+#edit-tralbum-form ol > li:first-child .left-panel.audio-upload, #edit-tralbum-form ol > li:first-child .left-panel.add-package {
+    background-image: none;
+}
+#edit-tralbum-form ol > li.selectable, #edit-tralbum-form ol > li.package_wrapper {
+    margin: 0;
+}
+#edit-tralbum-form ol.tracks .audio-upload .no-audio {
+    color: #900;
+    font-size: 11px;
+}
+#edit-tralbum-form a.hover {
+    text-decoration: underline;
+}
+#edit-tralbum-form div.audio-upload {
+    width: 440px;
+}
+#edit-tralbum-form .track > .h3-audio {
+    margin: 0 0 10px;
+}
+#edit-tralbum-form .h3-audio .controlHint {
+    color: #333;
+    display: none;
+    margin: 0 0 0 35px;
+}
+#edit-tralbum-form .h3-audio .controlHint .eta {
+    color: #333;
+    font-weight: bold;
+}
+#edit-tralbum-form .audio-upload {
+    font-size: 11px;
+    margin: 0 0 3px;
+}
+#edit-tralbum-form li.add-audio, #edit-tralbum-form li.add-package {
+
+    margin-bottom: 0;
+}
+#edit-tralbum-form div.right-panel dt.video-upload-section {
+    margin-bottom: 3px;
+}
+#edit-tralbum-form div.right-panel p.video-upload-text {
+    margin-top: 0;
+}
+#edit-tralbum-form .audio-upload .filename, #edit-tralbum-form .video-upload-text .filename, #edit-tralbum-form .video-upload-text .file-size, #edit-tralbum-form .video-upload-text .status, #edit-tralbum-form .video-upload-text .delete-file, #edit-tralbum-form .video-upload-text .cancel-video-upload {
+    color: #999;
+    display: inline-block;
+    font-size: 11px;
+    max-width: 257px;
+    overflow: hidden;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+#edit-tralbum-form .video-upload-text .filename.strikethrough, #edit-tralbum-form .video-upload-text .file-size.strikethrough {
+    text-decoration: line-through;
+}
+#edit-tralbum-form .video-upload-text .upload-file {
+    display: inherit;
+}
+#edit-tralbum-form .video-upload-text .filename, #edit-tralbum-form .video-upload-text .file-size, #edit-tralbum-form .video-upload-text .status, #edit-tralbum-form .video-upload-text .delete-file, #edit-tralbum-form .video-upload-text .cancel-video-upload {
+    display: inline;
+}
+#edit-tralbum-form .video-upload-text .delete-file, #edit-tralbum-form .video-upload-text .cancel-video-upload {
+    border-left: 1px solid #aaa;
+    color: inherit;
+    margin-left: 3px;
+    padding-left: 5px;
+}
+#edit-tralbum-form .video-upload-text .status {
+    color: #9aae28;
+    font-style: italic;
+    margin-left: 4px;
+}
+#edit-tralbum-form .video-upload-text .status.red {
+    color: red;
+    font-style: inherit;
+}
+#edit-tralbum-form .video-upload-text .file-size {
+    margin-left: 4px;
+}
+#edit-tralbum-form .audio-upload .pro-notice, #edit-tralbum-form .track-panel .pro-notice {
+    color: #408294;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+#edit-tralbum-form .audio-upload a.add-audio {
+    font-size: 22px;
+    margin-right: 20px;
+}
+#edit-tralbum-form .tracks .audio-upload a.add-audio {
+    margin-right: 0;
+}
+#edit-tralbum-form .audio-upload .without-audio {
+    display: inline-block;
+    line-height: 22px;
+}
+#edit-tralbum-form .audio-upload .without-audio a.menu {
+    display: inline-block;
+    margin-right: 22px;
+    padding: 7px;
+    position: relative;
+    top: -3px;
+}
+#edit-tralbum-form .audio-upload .without-audio a.menu:hover {
+    background: none repeat scroll 0 0 #e6e6e6;
+}
+#edit-tralbum-form .audio-upload .without-audio.selected a.menu {
+    background: none repeat scroll 0 0 #bbb;
+}
+#edit-tralbum-form .audio-upload .without-audio a.menu > .bc-ui {
+    background-position: -17px -1px;
+    display: inline-block;
+    height: 5px;
+    width: 9px;
+}
+#edit-tralbum-form .audio-upload .without-audio.selected a.menu > .bc-ui {
+    background-position: -9px -1px;
+}
+#edit-tralbum-form .audio-upload .without-audio a.add-track {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #bbb;
+    display: none;
+    line-height: 24px;
+    margin-top: -3px;
+    padding: 0 10px;
+    position: absolute;
+}
+#edit-tralbum-form .audio-upload .without-audio a.add-track:hover {
+    background: none repeat scroll 0 0 #fff;
+    text-decoration: none;
+}
+#edit-tralbum-form .audio-upload .without-audio.selected a.add-track {
+    display: block;
+}
+#edit-tralbum-form .audio-upload.uploading > .no-audio, #edit-tralbum-form .audio-upload.uploading > .encodings, #edit-tralbum-form .audio-upload.uploading > .pending-encodings {
+    display: none;
+}
+#edit-tralbum-form .audio-upload > .progress-wrapper {
+    display: none;
+}
+#edit-tralbum-form .audio-upload.uploading > .progress-wrapper {
+    display: block;
+}
+#edit-tralbum-form .audio-upload > .progress-wrapper > .filename {
+    display: inline-block;
+}
+#edit-tralbum-form .audio-upload .status {
+    color: #05ae35;
+    display: inline-block;
+    font-style: italic;
+    margin-left: 5px;
+}
+#edit-tralbum-form .audio-upload .status.queued, #edit-tralbum-form .audio-upload .status.validating {
+    color: #999;
+}
+#edit-tralbum-form .audio-upload .status.processing {
+    color: #9aae28;
+}
+#edit-tralbum-form .audio-upload .progress-wrapper .cancel {
+    color: #666;
+    display: inline-block;
+}
+#edit-tralbum-form .audio-upload .upload-progress .progress_outer, #edit-tralbum-form .video-upload-controls .upload-progress .progress_outer {
+    background: none repeat scroll 0 0 #f5fcf6;
+    border: 1px solid #0a7528;
+    height: 5px;
+    margin: 5px 0 0;
+    width: 280px;
+}
+#edit-tralbum-form .video-upload-controls .upload-progress .progress_outer {
+    margin-top: 10px;
+    width: 280px;
+}
+#edit-tralbum-form .audio-upload .upload-progress .progress_inner, #edit-tralbum-form .video-upload-controls .upload-progress .progress_inner {
+    background-color: #38c44d;
+    height: 5px;
+}
+.bc-ui.checkmark {
+    background-position: 0 -6px;
+    display: inline-block;
+    height: 11px;
+    margin: 0 3px 0 0;
+    width: 14px;
+}
+#edit-tralbum-form .replace {
+    color: #666;
+    display: inline-block;
+    font-size: 11px;
+}
+#edit-tralbum-form .replace.disabled, #edit-tralbum-form .audio-upload a.add-audio.disabled {
+    color: #ccc;
+}
+#edit-tralbum-form .filesize {
+    color: #999;
+    display: inline-block;
+    font-size: 11px;
+    padding: 0 0 0 3px;
+}
+#edit-tralbum-form .bar {
+    color: #ccc;
+    display: inline-block;
+    font-size: 11px;
+    padding: 0 3px;
+}
+.new-win-sm {
+    color: #999;
+    font-size: 11px;
+    margin: 10px 0 0;
+}
+#edit-tralbum-form .bdis {
+    clear: left;
+}
+#edit-tralbum-form .bdis h3 {
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: none;
+}
+#edit-tralbum-form .bdis ul {
+    color: #333;
+    list-style: none outside none;
+    margin: 0 10px 0 15px;
+    padding: 0;
+    width: 390px;
+}
+#edit-tralbum-form .bdis ul li {
+    line-height: 130%;
+    padding: 0 0 0 5px;
+}
+#edit-tralbum-form .bdis ul li .icon {
+    background-position: 0 -53px;
+    display: inline-block;
+    height: 11px;
+    margin: 0 5px 0 0;
+    width: 9px;
+}
+#edit-tralbum-form .bdis .controlHint {
+    margin-left: 10px;
+}
+#edit-tralbum-form .bdis .filesize {
+    display: inline-block;
+    padding: 0 0 0 5px;
+}
+#edit-tralbum-form .bdis .filename {
+    display: inline-block;
+    font-size: 12px;
+    max-width: 270px;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+#edit-tralbum-form .bdis > .items li.deleted .filename, #edit-tralbum-form .bdis > .items li.deleted .filesize {
+    text-decoration: line-through;
+}
+#edit-tralbum-form .bdis .upload-progress .progress_outer {
+    background: none repeat scroll 0 0 #f5fcf6;
+    border: 1px solid #0a7528;
+    height: 5px;
+    margin: 5px 0 0;
+    width: 300px;
+}
+#edit-tralbum-form .bdis .upload-progress .progress_inner {
+    background-color: #38c44d;
+    height: 5px;
+}
+#edit-tralbum-form .bdis .progress-wrapper {
+    margin: 0 0 0 40px;
+}
+#edit-tralbum-form .bdis .progress-wrapper > .status {
+    color: #05ae35;
+    font-style: italic;
+    margin-left: 10px;
+}
+#edit-tralbum-form a.add-package {
+    font-size: 22px;
+}
+#edit-tralbum-form .packageControls {
+    background-color: #fff;
+}
+#edit-tralbum-form div.right-panel .packageControls input.title {
+    width: 400px;
+}
+#edit-tralbum-form div.right-panel .packageControls .textInput.packageDescription {
+    width: 410px;
+}
+#edit-tralbum-form .packageControls input.packageOptionTitle {
+    width: 12em;
+}
+#edit-tralbum-form .gallery_item_blank {
+    border: 1px dashed silver;
+}
+#edit-tralbum-form .right-panel ul.price, #edit-tralbum-form .right-panel ul.quantity {
+    list-style: none outside none;
+    overflow: auto;
+    padding: 0;
+}
+#edit-tralbum-form .right-panel ul.price li, #edit-tralbum-form .right-panel ul.quantity li {
+    clear: left;
+    float: left;
+    margin: 0 0 7px;
+}
+#edit-tralbum-form .packages .right-panel dd.images {
+    overflow: visible;
+}
+#edit-tralbum-form .packages .right-panel .widgetLine {
+    clear: left;
+    float: left;
+    margin: 10px 0 5px;
+}
+#edit-tralbum-form .packages .right-panel .release-date {
+    margin: 20px 0 0;
+}
+#edit-tralbum-form .packages .right-panel .release-date .begin-shipping {
+    display: inline-block;
+    margin: 0 0 5px;
+}
+#edit-tralbum-form .packages .right-panel .packageShippingWidgets {
+    margin: 0;
+    padding: 0;
+}
+#external-purchase {
+    margin-top: 20px;
+}
+#external-purchase .details {
+    margin: 0 20px;
+}
+#external-purchase .details > p {
+    line-height: 125%;
+}
+#external-purchase .details label {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: right;
+    width: 60px;
+}
+#edit-tralbum-form #external-purchase .details input[type="text"] {
+    width: 320px;
+}
+#external-purchase .details .alert {
+    margin-left: 73px;
+}
+#edit-tralbum-form .preorder .control-wrapper {
+    margin-left: 20px;
+    padding: 0 15px 0 0;
+}
+#edit-tralbum-form .preorder ul.actions {
+    list-style: none outside none;
+    margin-left: 20px;
+    padding: 0;
+}
+#edit-tralbum-form .preorder ul.actions > li > label {
+    display: block;
+    margin-left: -20px;
+    padding: 0 10px;
+}
+#edit-tralbum-form .preorder ul.actions > li > label.preorder-box {
+    background-color: #deecf4;
+    border: 2px solid #91d6f5;
+    padding: 8px;
+}
+#edit-tralbum-form div.payment {
+    margin: 20px 0 0 -6px;
+}
+#edit-tralbum-form div.payment > div.box > p:first-child {
+    margin: 0;
+}
+#edit-tralbum-form div.payment .email {
+    color: #363636;
+    font-weight: bold;
+}
+#edit-tralbum-form div.payment > div.box.expanded a.show-details {
+    display: none;
+}
+#edit-tralbum-form div.payment > div.box {
+    padding: 6px 0 0 6px;
+}
+#edit-tralbum-form div.payment > div.box.expanded {
+    background-color: #fffdea;
+    border: 1px solid #fef58d;
+    padding: 5px;
+}
+#edit-tralbum-form div.payment > div.box > .details {
+    display: none;
+}
+#edit-tralbum-form div.payment > div.box.expanded > .details {
+    display: block;
+}
+#edit-tralbum-form div.payment .hide {
+    text-align: left;
+}
+#edit-tralbum-form.is-published .hide-when-published {
+    display: none;
+}
+#edit-tralbum-form > .save {
+    min-height: 146px;
+}
+#edit-tralbum-form .visibility-radios {
+    margin: 10px 0 20px;
+}
+#edit-tralbum-form .visibility-radios .row {
+    margin: 5px 0;
+}
+#edit-tralbum-form .visibility-radios .first-column {
+    display: inline-block;
+    width: 20px;
+}
+#edit-tralbum-form .visibility-radios .second-column {
+    display: inline-block;
+    width: 400px;
+}
+#edit-tralbum-form .visibility-radios .hint {
+    color: #909090;
+    margin: 0;
+}
+#edit-tralbum-form .visibility-radios .disabled {
+    color: #909090;
+}
+#edit-tralbum-form .visibility-radios .private-disable {
+    color: #909090;
+    display: inline-block;
+    margin-left: 5px;
+}
+#edit-tralbum-form .visibility-radios .sub-only-disable {
+    color: #909090;
+    display: inline-block;
+    margin-left: 5px;
+}
+#edit-tralbum-form .visibility-radios .subscriber-only-message {
+    margin: 8px 0 0;
+    width: 400px;
+}
+#edit-tralbum-form > div.save a.button {
+    background-color: #686868;
+    border: 1px solid #333;
+    color: white;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 20px;
+    text-align: center;
+    width: 108px;
+}
+
+.saveButton {
+    background-color: #0687f5;
+    border: 1px solid #2072b8;
+    color: white;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 20px;
+    text-align: center;
+    width: 108px;
+	cursor:pointer;
+}
+#edit-tralbum-form > div.save a.button:hover {
+    text-decoration: underline;
+}
+#edit-tralbum-form > div.save a.button.disabled {
+    cursor: default;
+    opacity: 0.3;
+}
+#edit-tralbum-form > div.save a.button.disabled:hover {
+    text-decoration: none;
+}
+#edit-tralbum-form > div.save a.show-when-dirty, #edit-tralbum-form.dirty > div.save a.hide-when-dirty {
+    display: none;
+}
+#edit-tralbum-form.dirty > div.save a.show-when-dirty {
+    display: inline-block;
+}
+#edit-tralbum-form > div.save a.button.save-draft {
+    background-color: #0687f5;
+    border: 1px solid #2072b8;
+}
+#edit-tralbum-form > div.save a.button.publish, #edit-tralbum-form > div.save a.button.update, #edit-tralbum-form > div.save a.button.save {
+    background-color: #0ec200;
+    border: 1px solid #51924c;
+    margin-right: 30px;
+}
+#edit-tralbum-form > div.save a.button.view-draft {
+    background-color: #fff;
+    border: 1px solid #c7e1f7;
+    color: #0687f5;
+    font-size: 14px;
+    font-weight: bold;
+}
+#edit-tralbum-form > div.save a.cancel {
+    float: right;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 20px 0 0;
+}
+#edit-tralbum-form > div.save a.button.working {
+    background-color: white;
+    background-image: url("/img/spinny.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-color: gray;
+}
+#edit-tralbum-form > div.save .congrats {
+    padding: 0 15px 0 0;
+}
+#edit-tralbum-form > div.save .congrats .congrats-message {
+    color: #07b92b;
+    font-size: 16px;
+}
+#edit-tralbum-form > div.save .congrats {
+    margin: 20px 0 0;
+}
+#edit-tralbum-form > div.save .congrats .releaseParty {
+    font-size: 14px;
+    margin: 10px 0 0;
+}
+#edit-tralbum-form > div.save .congrats .congrats-message span.title {
+    font-style: italic;
+}
+#edit-tralbum-form > div.save .congrats .view-published {
+    background-color: #fff;
+    border: 1px solid #c7e1f7;
+    color: #0687f5;
+    margin: 20px 0 0;
+    width: 200px;
+}
+#edit-tralbum-form > div.save .congrats .view-published:hover {
+    border: 1px solid #66b4f6;
+    text-decoration: none;
+}
+#edit-tralbum-form .draft-buttons {
+    margin-bottom: 30px;
+}
+#edit-tralbum-form .publish-track h4 {
+    margin-top: 0;
+}
+#edit-tralbum-form .save .publish-warning {
+    margin-bottom: 10px;
+    width: 435px;
+}
+#edit-tralbum-form .subscribers-notified-date {
+    color: #909090;
+    margin-bottom: 15px;
+}
+#edit-tralbum-form div.right-panel {
+    background-color: white;
+    float: right;
+    margin: -12px -479px 0 0;
+    padding: 15px 10px 2em 20px;
+    width: 448px;
+}
+#edit-tralbum-form div.right-panel .jquery-placeholder-hint.controlHint {
+    color: #b0b0b0;
+    padding-left: 5px;
+}
+#edit-tralbum-form div.right-panel > dl {
+    margin: 0;
+}
+#edit-tralbum-form input[type="text"], #edit-tralbum-form textarea {
+    border: 1px solid #9c9c9c;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    font-size: 12px;
+    padding: 3px;
+    width: 400px;
+}
+#edit-tralbum-form div.right-panel input.title {
+    font-size: 22px;
+    margin: 0 0 3px;
+    padding: 5px 10px;
+    width: 405px;
+}
+#edit-tralbum-form .required-asterisk {
+    color: #50a1e6;
+    display: inline-block;
+    font-size: 18px;
+    margin: -2px 3px 0 0;
+    opacity: 0;
+    vertical-align: top;
+}
+#edit-tralbum-form .album-title .required-asterisk, #edit-tralbum-form .track-title .required-asterisk, #edit-tralbum-form .package-title .required-asterisk {
+    margin: -2px 3px 0 -10px;
+    padding: 0;
+    width: 8px;
+}
+#edit-tralbum-form input.title:focus, #edit-tralbum-form input[type="text"]:focus, #edit-tralbum-form textarea:focus {
+    border-color: #50a1e6;
+    box-shadow: 0 0 5px #b4d7f9;
+    outline: medium none;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+#edit-tralbum-form div.right-panel input.price {
+    text-align: right;
+    width: 4em;
+}
+#edit-tralbum-form .download-desc-container textarea {
+    width: 380px;
+}
+#edit-tralbum-form input[type="text"]:disabled, #edit-tralbum-form textarea:disabled {
+    border-color: #aaa;
+    color: #aaa;
+}
+#edit-tralbum-form input[type="text"] {
+    border-color: #9c9c9c #9c9c9c #ccc #ccc;
+}
+#edit-tralbum-form textarea {
+    border-color: #9c9c9c #9c9c9c #ccc #ccc;
+    height: 48px;
+}
+#edit-tralbum-form input.has-validation-error[type="text"], #edit-tralbum-form textarea.has-validation-error {
+    border-color: #e00;
+}
+#edit-tralbum-form .fieldHintWrapper {
+    padding-top: 0 !important;
+}
+#edit-tralbum-form .release-date input {
+    width: 8em;
+}
+#edit-tralbum-form .release-date .controlTip {
+    padding-left: 0.5em;
+}
+#edit-tralbum-form .right-panel .release-date p {
+    margin-bottom: 0;
+}
+#edit-tralbum-form div.right-panel dt {
+    clear: left;
+    margin-bottom: 6px;
+}
+#edit-tralbum-form div.right-panel dd {
+    margin: 0 0 16px;
+}
+#edit-tralbum-form div.right-panel dd.bottom-border {
+    background-image: url("/img/navbar-border.png");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    padding-bottom: 21px;
+}
+#edit-tralbum-form div.right-panel .bandtag {
+    font-weight: bold;
+}
+#edit-tralbum-form div.right-panel .art-upload {
+    float: left;
+    margin-top: 7px;
+    width: 100%;
+}
+#edit-tralbum-form div.right-panel .art-upload > .art, #edit-tralbum-form div.right-panel .art-upload > .blank {
+    height: 210px;
+    width: 210px;
+}
+#edit-tralbum-form div.right-panel .art-upload > .art img {
+    height: 100%;
+    width: 100%;
+}
+#edit-tralbum-form div.right-panel .art-upload > .blank {
+    border: 1px dashed silver;
+    color: #999;
+    text-align: center;
+}
+#edit-tralbum-form div.right-panel .art-upload > .blank a.upload {
+    display: block;
+    font-size: 18px;
+    margin: 60px 0 0;
+}
+#edit-tralbum-form div.right-panel .art-upload > .show-if-part-of-album {
+    color: #999;
+    float: right;
+    margin: 60px 40px 0 0;
+    padding-bottom: 0;
+    width: 180px;
+}
+#edit-tralbum-form div.right-panel .art-upload.uploading .image-upload-hint {
+    display: none;
+}
+#edit-tralbum-form div.right-panel .art-upload .upload-progress-wrapper {
+    display: none;
+    margin: 80px 0;
+}
+#edit-tralbum-form div.right-panel .art-upload.uploading .upload-progress-wrapper {
+    display: block;
+}
+#edit-tralbum-form div.right-panel .art-upload .upload-progress .progress_outer {
+    height: 5px;
+    margin: 5px auto;
+    width: 170px;
+}
+#edit-tralbum-form div.right-panel .art-upload .upload-progress .progress_inner {
+    height: 5px;
+}
+#edit-tralbum-form div.right-panel .download-desc-container .add-more {
+    float: left;
+    margin: 10px 0 0;
+}
+#edit-tralbum-form .download-settings .streaming {
+    margin-bottom: 10px;
+}
+#edit-tralbum-form .download-settings .disabled {
+    opacity: 0.5;
+}
+#edit-tralbum-form a.disabled-link {
+    color: #909090;
+}
+#edit-tralbum-form .selectable .show-if-private, #edit-tralbum-form .selectable .show-if-subscriber-only {
+    display: none;
+}
+#edit-tralbum-form .selectable.private .show-if-private, #edit-tralbum-form .subscriber-only .show-if-subscriber-only {
+    color: black;
+    display: block;
+}
+#edit-tralbum-form .selectable.private .download-settings .email {
+    color: #aaa;
+}
+#edit-tralbum-form div.right-panel label.enable-download, #edit-tralbum-form div.right-panel label.enable-streaming {
+    font-weight: bold;
+}
+#edit-tralbum-form div.right-panel ul.download-options, #edit-tralbum-form div.right-panel ul.download-options > li > ul {
+    list-style: none outside none;
+    overflow: auto;
+    padding-left: 20px;
+}
+#edit-tralbum-form div.right-panel ul.download-options > li {
+    clear: left;
+    float: left;
+    margin: 10px 0 5px;
+}
+#edit-tralbum-form div.right-panel ul.download-options > li > ul > li {
+    margin: 5px 0;
+}
+#edit-tralbum-form div.right-panel ul.download-options label.require-email {
+    display: block;
+    margin: 5px 0 5px 20px;
+}
+#edit-tralbum-form div.right-panel ul.download-options .deselected .dependent {
+    color: #aaa;
+}
+#edit-tralbum-form div.right-panel ul.download-options .deselected .display-dependent {
+    display: none;
+}
+#edit-tralbum-form div.right-panel ul.download-options li.download-desc-container {
+    margin-top: 10px;
+}
+#edit-tralbum-form div.right-panel ul.download-options li.download-desc-container, #edit-tralbum-form div.right-panel ul.download-options li.download-desc-container dd {
+    margin-bottom: 0;
+}
+#edit-tralbum-form div.right-panel ul.download-options .expander textarea {
+    margin: 10px 0 0;
+}
+#edit-tralbum-form dl.download-options {
+    margin: 20px 0 0 20px;
+}
+#edit-tralbum-form dl.download-options > dd {
+    margin: 0;
+}
+#edit-tralbum-form dl.download-options > dt.pricing a {
+    float: right;
+    margin-right: 20px;
+}
+#edit-tralbum-form dl.download-options > dt.description {
+    margin: 24px 0 5px;
+}
+#edit-tralbum-form dl.download-options > dd.description {
+    margin: 24px 0 5px;
+}
+#edit-tralbum-form .item_desc {
+    font-style: italic;
+    margin: 3px 0;
+    width: 400px;
+}
+#edit-tralbum-form dl.download-options .description-expanded .more {
+    margin: 8px 0 0;
+}
+#edit-tralbum-form dl.download-options .description-expanded .hide {
+    margin: 5px 0 0;
+    text-align: center;
+}
+#edit-tralbum-form dl.download-options label {
+    display: block;
+    margin: 10px 0 0;
+}
+#edit-tralbum-form dl.download-options label.price {
+    margin-bottom: 5px;
+}
+#edit-tralbum-form dl.download-options p {
+    margin-bottom: 0;
+}
+#edit-tralbum-form span.show-if-nyp {
+    display: none;
+}
+#edit-tralbum-form .nyp span.show-if-nyp {
+    display: inline;
+}
+#edit-tralbum-form span.show-if-free {
+    display: none;
+}
+#edit-tralbum-form .free span.show-if-free {
+    display: inline;
+}
+#edit-tralbum-form .free span.hide-if-free {
+    display: none;
+}
+#edit-tralbum-form .controlTip.allowpaymore, #edit-tralbum-form .nyp .controlTip.allowpaymore, #edit-tralbum-form .nyp.free .controlTip.allowpaymore {
+    display: none;
+}
+#edit-tralbum-form .free .controlTip.allowpaymore {
+    display: block;
+}
+#edit-tralbum-form .private .hint {
+    color: #909090;
+}
+#edit-tralbum-form dt.lyrics a {
+    float: right;
+    margin-right: 40px;
+}
+.right-panel .video-upload-text {
+    margin-bottom: 3pt;
+}
+.right-panel .video-upload-controls .upload-file-hint-text {
+    margin-top: 0;
+}
+.right-panel .video-pro-text {
+    line-height: 10pt;
+    margin-top: 0;
+}
+.right-panel .video-upload-controls .caption-label {
+    margin-bottom: 3pt;
+}
+ul.license-selector {
+    list-style: none outside none;
+    padding: 0;
+}
+ul.license-selector > li {
+    margin: 5px 0 0;
+}
+ul.license-selector > li p {
+    color: #363636;
+    display: none;
+    margin-left: 1.7em;
+    margin-top: 0.4em;
+}
+ul.license-selector > li.selected p {
+    display: block;
+}
+#edit-tralbum-form dl.track-panel > dd > dl {
+    margin-left: 20px;
+}
+#edit-tralbum-form .show-if-part-of-album {
+    display: none;
+}
+#edit-tralbum-form .part-of-album span.show-if-part-of-album {
+    display: inline;
+}
+#edit-tralbum-form .part-of-album p.show-if-part-of-album, #edit-tralbum-form .part-of-album div.show-if-part-of-album {
+    display: block;
+}
+#edit-tralbum-form .part-of-album .hide-if-part-of-album {
+    display: none;
+}
+#edit-tralbum-form .show-if-preorder, #edit-tralbum-form.is-preorder .track.include-in-preorder .show-if-preorder {
+    display: none;
+}
+#edit-tralbum-form.is-preorder dl.track-panel .show-if-preorder, #edit-tralbum-form.is-preorder .release-date .show-if-preorder {
+    display: inline;
+}
+#edit-tralbum-form.is-preorder .hide-if-preorder {
+    display: none;
+}
+#edit-tralbum-form dl.track-panel .include-in-preorder {
+    display: none;
+}
+#edit-tralbum-form .track .show-if-included-in-preorder {
+    display: none;
+}
+#edit-tralbum-form .track.include-in-preorder .show-if-included-in-preorder {
+    display: block;
+}
+#edit-tralbum-form.is-preorder dl.track-panel .include-in-preorder {
+    background-color: #e9f7ff;
+    border: 2px solid #97dcfb;
+    display: block;
+    margin: 10px 0 0;
+    padding: 8px;
+}
+#edit-tralbum-form dl.track-panel .include-in-preorder label {
+    display: block;
+    margin: 10px 0 10px 20px;
+}
+#edit-tralbum-form .preorder .controlTip {
+    color: #333;
+}
+#edit-tralbum-form .preorder .hint {
+    color: #909090;
+    display: inline-block;
+}
+#edit-tralbum-form .preorder .disabled {
+    color: #909090;
+}
+#edit-tralbum-form dl.track-panel .include-in-preorder label input {
+    float: left;
+    margin-left: -20px;
+}
+#edit-tralbum-form dl.track-panel .last-item-on-page {
+    margin-bottom: 102px;
+}
+.controlTip {
+    color: #999;
+    margin: 0.5em 0 0;
+}
+.deletableArt {
+    border: 1px solid #eee;
+}
+.whylink {
+}
+#edit-tralbum-form .part-of-album select.album_select_list_choice {
+    margin-top: 5px;
+    max-width: 435px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#edit-tralbum-form .part-of-album select.album_select_list_choice option {
+    max-width: 900px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#edit-tralbum-form ol.packages.merch .package_wrapper .left-panel-container {
+    cursor: default;
+}
+#edit-tralbum-form ol.packages.merch .package_wrapper .title a.edit {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0 12px 0 5px;
+}
+#edit-tralbum-form ol.packages.merch .summary.no-spaces {
+    font-size: 0;
+}
+#edit-tralbum-form .red {
+    color: red;
+}
+#edit-tralbum-form ol.packages.merch .summary.no-spaces > span {
+    font-size: 11px;
+}
+#edit-tralbum-form ol.packages.merch .left-panel p.title.digital-download {
+    color: gray;
+    font-style: italic;
+}
+.bigger-instructions {
+    font-size: 13px;
+}
+#merch-selector {
+    font-size: 0;
+}
+#merch-selector .body {
+    height: 300px;
+    overflow-y: scroll;
+}
+#merch-selector .row {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+#merch-selector .body .row.selected, #merch-selector .body .row.selected:hover {
+    background-color: #cfffdc;
+}
+#merch-selector .body .row.disabled, #merch-selector .body .row.disabled:hover {
+    background-color: inherit;
+    cursor: default;
+}
+#merch-selector .body .row.disabled > * {
+    opacity: 0.5;
+}
+#merch-selector .body .row {
+    cursor: pointer;
+}
+#merch-selector .body .row:hover {
+    background: none repeat scroll 0 0 #f3f7ff;
+}
+#merch-selector .row > div {
+    display: inline-block;
+    font-size: 11px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+#merch-selector .header {
+    color: #999;
+}
+#merch-selector .header .item {
+    width: 170px;
+}
+#merch-selector .thumb {
+    background-color: #ccc;
+    height: 20px;
+    overflow: hidden;
+    width: 20px;
+}
+#merch-selector .thumb img {
+    height: 20px;
+    left: -3px;
+    position: relative;
+    width: 27px;
+}
+#merch-selector .title {
+    color: #0687f5;
+    font-weight: bold;
+    width: 130px;
+}
+#merch-selector .red {
+    color: red;
+}
+#merch-selector .quantity {
+    text-align: center;
+    width: 50px;
+}
+#merch-selector .download {
+    text-align: center;
+    width: 65px;
+}
+#merch-selector .price {
+    text-align: center;
+    width: 50px;
+}
+#merch-selector .included {
+    text-align: center;
+    width: 45px;
+}
+a.add-merch {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+a.add-merch.disabled {
+    color: #aed4f5;
+    cursor: default;
+}
+a.add-merch.disabled:hover {
+    text-decoration: none;
+}
+.packages .left-panel .delete {
+    position: relative;
+}
+.deletedescription {
+    color: #c2c2c2;
+    display: none;
+    font-size: 11px;
+    position: absolute;
+    right: 0;
+    top: 26px;
+}
+.left-panel-container:hover .deletedescription {
+    display: block;
+}
+#fan-container .collected-by {
+    color: #999;
+}
+.collected-by.collectors, .collected-by.subscribers, .collected-by .message, .collected-by .subscriber-message {
+    display: none;
+}
+.collected-by .deets {
+    font: 12px/1.16667em 'Helvetica Neue',Helvetica,sans-serif;
+    margin-top: 10px;
+    position: relative;
+}
+.collected-by .deets > .more-writing {
+    display: block;
+    margin-bottom: 15px;
+}
+.collected-by .deets > .writing {
+    margin-bottom: 10px;
+    min-height: 25px;
+}
+.collected-by.tralbum .deets > .writing {
+    margin-bottom: 15px;
+    position: relative;
+}
+.collected-by .deets > .writing.hidden {
+    display: none;
+}
+.collected-by .deets > .writing a.censor {
+    display: block;
+    float: right;
+    font-family: Arial,sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0 4px 5px 5px;
+    padding: 2px 10px;
+    visibility: hidden;
+}
+.collected-by .deets > .writing:hover a.censor {
+    background-color: rgba(0, 0, 0, 0.05);
+    opacity: 0.5;
+    visibility: visible;
+}
+.invertIconography .collected-by .deets > .writing:hover a.censor {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+}
+.collected-by .deets > .writing a.censor:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+.invertIconography .collected-by .deets > .writing a.censor:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+.collected-by .deets > .writing > .pic {
+    position: absolute;
+}
+.collected-by.tralbum .deets > .writing > .pic {
+    position: absolute;
+    top: 3px;
+}
+.collected-by .deets > .writing > .text {
+    font-family: georgia,serif;
+    font-style: italic;
+    margin-left: 32px;
+}
+.collected-by.tralbum .deets > .writing > .text {
+    margin-left: 35px;
+}
+#fan-container .collected-by .deets > .writing > .text {
+    color: #595959;
+}
+.collected-by .deets > .writing a.name {
+    color: inherit;
+    font: 500 12px/1.25em 'Helvetica Neue',Helvetica,sans-serif;
+    padding-right: 0.2em;
+}
+.collected-by .deets > .writing .fav-track {
+    display: inline-block;
+}
+.collected-by .deets img.thumb {
+    height: 28px;
+    width: 28px;
+}
+.collected-by .deets > .writing + .no-writing {
+    padding-top: 5px;
+}
+.collected-by .deets > .no-writing {
+    font-size: 0;
+    margin-left: -5px;
+}
+.collected-by .deets > .no-writing > .more-thumbs {
+    display: block;
+    font-size: 12px;
+    margin: 2px 0 0 3px;
+}
+.collected-by .deets > .no-writing > .more-everything {
+    display: block;
+    font-size: 12px;
+    margin: 2px 0 0 3px;
+}
+.collected-by .deets > .no-writing > .fan {
+    display: inline-block;
+    font-size: 11px;
+    height: 28px;
+    margin: 0 3px 7px 4px;
+    width: 28px;
+}
+.collected-by .deets > .no-writing > .fan.hidden {
+    display: none;
+}
+.collected-by .pic {
+    outline: 1px solid rgba(0, 0, 0, 0.05);
+    outline-offset: -1px;
+    position: relative;
+}
+.collected-by .deets .pic > .tooltip {
+    bottom: 30px;
+    display: none;
+    left: -62px;
+    padding-bottom: 3px;
+    position: absolute;
+    width: 150px;
+    z-index: 3;
+}
+.collected-by .deets .pic > .tooltip > div {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+.collected-by .deets .pic > .tooltip img.grid {
+    display: block;
+    height: 140px;
+    margin-bottom: 5px;
+    width: 140px;
+}
+.collected-by .deets .pic > .tooltip .name {
+    width: 100%;
+}
+.tooltip .writing {
+    font-family: georgia,serif;
+    font-style: italic;
+    width: 100%;
+}
+.errorMessage{ color:#F00; font-size:12px; }
