@@ -9,16 +9,19 @@ class UserIdentity extends CUserIdentity
 {
     private $_id;
 	public $userrole;
+	
 	public function __construct($username, $password, $userrole)
 	{
 	    $this->username = $username;
 	    $this->password = $password;
     	$this->userrole = $userrole;
 	}
+	
     public function authenticate()
     {
-		if($this->userrole != "user")
-		{
+		
+		if($this->userrole == 'admin'){
+			
 			$record=Adminusers::model()->findByAttributes(array('UserName'=>$this->username,'Status'=>'1'));
 			if($record===null)
 				$this->errorCode=self::ERROR_USERNAME_INVALID;
@@ -29,9 +32,9 @@ class UserIdentity extends CUserIdentity
 				$this->_id=$record->UserId;
 				$this->errorCode=self::ERROR_NONE;
 			}
-		}
-		else
-		{
+			
+		}else if($this->userrole == 'user'){
+			
 			$record=User::model()->findByAttributes(array('name'=>$this->username));
 			if($record===null)
 				$this->errorCode=self::ERROR_USERNAME_INVALID;
@@ -41,8 +44,10 @@ class UserIdentity extends CUserIdentity
 			{
 				Yii::app()->session['userid'] = $record->id;
 				$this->_id=$record->id;
+				$this->setState('userName', $record->name);
 				$this->errorCode=self::ERROR_NONE;
 			}
+			
 		}
         return !$this->errorCode;
     }
