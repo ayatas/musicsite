@@ -64,14 +64,7 @@ $(function(){
 			$(".payment .box").removeClass('expanded');
 			$(".show-details").show();
 		});					
-	});	
-	
-	$(".album-image-delete").click(function(){
-		$(".album-image-block").hide();
-		$(".image-upload-hint").show();
-		$(".album-image-thumnail img").attr("src","");
-		$("#Albums_image").val("");				
-	});
+	});		
 	
 });
 </script>
@@ -83,9 +76,7 @@ $(function(){
 	),
 	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
-
 <?php //echo $form->errorSummary($model); ?>
-
 <div class="top-spacer"> </div>
 <div data-bind="css: { 'private': private() }" class="album selectable top-border bottom-border nyp downloadable selected">
   <div class="right-panel">
@@ -104,7 +95,7 @@ $(function(){
         'model' => $model,
         'attribute' => 'releaseDate',
         'options' => array(       
-        'dateFormat' => 'mm-dd-yy',
+        'dateFormat' => 'mm/dd/yy',
         ),
         'htmlOptions' => array(
         'size' => '10',
@@ -179,37 +170,44 @@ $(function(){
         <p class="show-if-part-of-album"> Track artwork defaults to use the album artwork. If you would like track art that differs from album art, upload specific track art here. </p>
         <div class="blank">
          <div class="album-image-block hide">
-         	<img class="album-image" src="" alt="" width="210" height="210"  />
-            <div class="album-image-delete">
-            <img src="<?php echo Yii::app()->request->baseUrl.'/images/icons/16/delete.png';?>" alt="delete" /></div>
          </div>	
           <div class="image-upload-hint">            
 				<br /><br />
 				<?php
 				$albumUrl = Yii::app()->request->baseUrl.'/images/albums/';
+				$getAlbumImage = CController::createUrl('artist/getAlbumImage');
+				
                 $this->widget('ext.EAjaxUpload.EAjaxUpload',
                 array(
 					'id'=>'uploadFile',
 					'config'=>array(
 					'action'=>Yii::app()->createUrl('artist/upload'),
 					'allowedExtensions'=>array("jpg","jpeg","gif","png"),
-					'sizeLimit'=>2*1024*1024,
+					'sizeLimit'=>4*1024*1024,
 					'auto'=>true,
 					'multiple' => false,
 					//'onSubmit'=>'js:function(){ $("#userLoader").addClass("userloading");}',
-					'onComplete'=>'js:function(id, fileName, responseJSON){							
+					'onComplete'=>'js:function(id, fileName, responseJSON){	
+						var file = responseJSON["filename"];
+						$.ajax({
+        				url: "'. $getAlbumImage . '",
+						type:"POST",
+						data: { "imageName": file },
+        				success: function(data) { 
+							$(".album-image-block").html(data); 
+							$(".album-image-thumnail img").attr("src","'.$albumUrl.'"+file);
+							}
+        				});			
 						$(".image-upload-hint").hide();
+						$("#Albums_image").val(file);
 						$(".album-image-block").show();
-						$(".album-image-block img.album-image").attr("src","'.$albumUrl.'"+responseJSON["filename"]);
-						$(".album-image-thumnail img").attr("src","'.$albumUrl.'"+responseJSON["filename"]);
-						$("#Albums_image").val(responseJSON["filename"]);				
 					}',
 					'messages'=>array(
-					'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
-					'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
-					'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
-					'emptyError'=>"{file} is empty, please select files again without it.",
-					'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+						'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+						'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+						'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+						'emptyError'=>"{file} is empty, please select files again without it.",
+						'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
 					),
 					)                
                 ));

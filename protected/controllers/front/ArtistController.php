@@ -23,7 +23,7 @@ class ArtistController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('addAlbum','upload','removeAlbumImage'),
+				'actions'=>array('addAlbum','upload','removeAlbumImage','getAlbumImage'),
 				'users'=>array('@'),
 			),			
 			array('deny',  // deny all users
@@ -138,22 +138,48 @@ class ArtistController extends Controller
 		Yii::import("ext.EAjaxUpload.qqFileUploader");
         $folder=Yii::getPathOfAlias('webroot').'/images/albums/';// folder for uploaded files
         $allowedExtensions = array("jpg","jpeg","gif","png");//array("jpg","jpeg","gif","exe","mov" and etc...
-        $sizeLimit = 2 * 1024 * 1024;// maximum file size in bytes
+        $sizeLimit = 4 * 1024 * 1024;// maximum file size in bytes
         $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
         $result = $uploader->handleUpload($folder);
         $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES); 
         $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
         $fileName=$result['filename'];//GETTING FILE NAME  
-		//$img = CUploadedFile::getInstance($model,'image');      
 		
 		echo $return;// it's array
     }	
 	
-	public function actionRemoveAlbumImage(){
+	public function actionGetAlbumImage(){
 		
+		if(isset($_POST['imageName'])){
+			$url = Yii::app()->request->baseUrl.'/images/albums/'.$_POST['imageName'];
+			echo '<img src="'.$url.'" alt="" width="210" height="210" />';			
+			
+			echo CHtml::tag('div',array(
+				'onClick'=>CHtml::ajax(array(			
+				'type'=>'POST',
+				'url'=>array('artist/removeAlbumImage'),
+				'data'=>array('imgName' =>$_POST['imageName'] ),
+				'success'=>'function(data) {
+					$(".album-image-block").hide();
+					$(".image-upload-hint").show();
+					$(".album-image-thumnail img").attr("src","");
+				}',				
+				'update'=>'.album-image-block',
+				)
+				),
+				'class'=>'album-image-delete',
+				),'',true
+			);
+			}
 	}
 		
-    public function actionAddtrack()
+    public function actionRemoveAlbumImage(){
+		if(isset($_POST['imgName'])){
+			unlink('images/albums/'.$_POST['imgName']);
+			echo '';
+		}
+	}
+	public function actionAddtrack()
     {
         $this->render('addtrack');
     }
