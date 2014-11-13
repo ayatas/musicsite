@@ -10,7 +10,7 @@
  *
  * The followings are the available model relations:
  * @property Fan $fan
- * @property Tarcks $track
+ * @property Tracks $track
  */
 class Collections extends CActiveRecord
 {
@@ -47,7 +47,7 @@ class Collections extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'fan' => array(self::BELONGS_TO, 'Fan', 'fanId'),
-			'track' => array(self::BELONGS_TO, 'Tarcks', 'trackId'),
+			'track' => array(self::BELONGS_TO, 'Tracks', 'trackId'),
 		);
 	}
 

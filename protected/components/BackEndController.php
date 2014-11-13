@@ -14,6 +14,7 @@ class BackEndController extends CController
 
     public function accessRules()
     {
+
         return array(
             array('allow'  ,
                 'users'  =>array('*'),
@@ -21,10 +22,16 @@ class BackEndController extends CController
             ),
             array('allow',
                 'users'=>array('@'),
+				'expression' => 'Adminusers::model()->findByPk(Yii::app()->user->getId())',				
             ),
             array('deny' ,
                 'users'=>array('*'),
+				'deniedCallback' => array($this, 'redirecting'),
             ),
         );
     }
+	
+		public function redirecting(){
+			$this->redirect(array('/site/login'));
+		}
 }

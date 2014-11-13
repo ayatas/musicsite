@@ -1,5 +1,4 @@
 <?php
-
 return CMap::mergeArray(
     require(dirname(__FILE__).'/main.php'),
     array(
@@ -7,8 +6,8 @@ return CMap::mergeArray(
             // uncomment the following to enable URLs in path - format
             'urlManager'=>array(
                 'urlFormat'=>'path',
-                 'showScriptName'=>false,
-				 'caseSensitive'=>false,
+                'showScriptName'=>false,
+				'caseSensitive'=>false,
                 'rules'    =>array(
                 	'' => 'site/index',
                 	'<controller>' => '<controller>/index',
@@ -17,8 +16,6 @@ return CMap::mergeArray(
                     '<controller:\w+>/<action:\w+>'         =>'<controller>/<action>',
                 ),
             ),
-
         ),
     )
-	
 );

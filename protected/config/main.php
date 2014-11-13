@@ -36,6 +36,31 @@ return array(
 
 	// application components
 	'components' => array(
+	
+	// application components
+		'Paypal' => array(
+		'class'=>'application.components.Paypal',
+		'apiUsername' => 'brahmaji-facilitator_api1.ayatas.com',
+		'apiPassword' => '1394451429',
+		'apiSignature' => 'AFcWxV21C7fd0v3bYYYRCpSSRl31AkYxqPdBN0RFybR06NX-rNRYvI7o',
+		'apiLive' => false,	 
+		'returnUrl' => 'payment/confirm/', //regardless of url management component
+		'cancelUrl' => 'payment/cancel/', //regardless of url management component
+	 
+		// Default currency to use, if not set USD is the default
+		'currency' => 'USD',
+	 
+		// Default description to use, defaults to an empty string
+		//'defaultDescription' => '',
+	 
+		// Default Quantity to use, defaults to 1
+		//'defaultQuantity' => '1',
+	 
+		//The version of the paypal api to use, defaults to '3.0' (review PayPal documentation to include a valid API version)
+		//'version' => '3.0',
+	),
+	
+	'region'=>array('class'=>'RegionSingleton'),
 		'user' => array(
 			// enable cookie - based authentication
 			'allowAutoLogin' => true, ),

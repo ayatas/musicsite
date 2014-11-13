@@ -7,6 +7,7 @@
  * @property integer $id
  * @property integer $artistId
  * @property string $name
+ * @property string $slug
  * @property string $releaseDate
  * @property string $price
  * @property string $payMore
@@ -23,8 +24,8 @@
  * @property string $status
  *
  * The followings are the available model relations:
- * @property Tarcks[] $tarcks
- * @property Tarcks[] $tarcks1
+ * @property Tracks[] $tracks
+ * @property Tracks[] $tracks1
  */
 class Albums extends CActiveRecord
 {
@@ -44,14 +45,16 @@ class Albums extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('artistId, name', 'required'),
+			array('artistId, name, slug', 'required'),
 			array('artistId', 'numerical', 'integerOnly'=>true),
 			array('name, price, image, artist, tags, upc_ean', 'length', 'max'=>45),
+			array('name, slug', 'unique'),
+			array('slug', 'length', 'max'=>50),
 			array('payMore, visibility, status', 'length', 'max'=>1),
 			array('description, releaseDate, credits, downLoadDescription, createdDate, updatedDate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, artistId, name, releaseDate, price, payMore, image, downLoadDescription, artist, description, credits, tags, upc_ean, visibility, createdDate, updatedDate, status', 'safe', 'on'=>'search'),
+			array('id, artistId, name, slug, releaseDate, price, payMore, image, downLoadDescription, artist, description, credits, tags, upc_ean, visibility, createdDate, updatedDate, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,8 +66,8 @@ class Albums extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'tarcks' => array(self::HAS_MANY, 'Tarcks', 'albumId'),
-			'tarcks1' => array(self::HAS_MANY, 'Tarcks', 'artistId'),
+			'tracks' => array(self::HAS_MANY, 'Tracks', 'albumId'),
+			'tracks1' => array(self::HAS_MANY, 'Tracks', 'artistId'),
 		);
 	}
 
@@ -77,6 +80,7 @@ class Albums extends CActiveRecord
 			'id' => 'ID',
 			'artistId' => 'Artist',
 			'name' => 'Album Title',
+			'slug' => 'Slug',
 			'releaseDate' => 'release date',
 			'price' => 'pricing',
 			'payMore' => 'Pay More',
@@ -115,6 +119,7 @@ class Albums extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('artistId',$this->artistId);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('slug',$this->slug,true);
 		$criteria->compare('releaseDate',$this->releaseDate,true);
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('payMore',$this->payMore,true);
@@ -125,6 +130,7 @@ class Albums extends CActiveRecord
 		$criteria->compare('credits',$this->credits,true);
 		$criteria->compare('tags',$this->tags,true);
 		$criteria->compare('upc_ean',$this->upc_ean,true);
+		$criteria->compare('visibility',$this->visibility,true);
 		$criteria->compare('createdDate',$this->createdDate,true);
 		$criteria->compare('updatedDate',$this->updatedDate,true);
 		$criteria->compare('status',$this->status,true);

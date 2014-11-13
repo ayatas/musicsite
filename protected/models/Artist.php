@@ -54,13 +54,14 @@ class Artist extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('userId,url,bandName,fanEmail,shoFanEmail,paypalEmail,genreId', 'required','on'=>'update'),
-			array('bandName,userId', 'required','on'=>'create,adminUpdate,adminUpdate'),
+			array('userId,url,bandName,genreId', 'required','on'=>'update'),
+			array('bandName,url', 'required','on'=>'create,adminUpdate,adminUpdate'),
 			array('userId, genreId, yourLocation, taxPercent', 'numerical', 'integerOnly'=>true),
 			array('bandName, url, fanEmail, genreTags, paypalEmail, currency, customHeader', 'length', 'max'=>45),
 			array('shoFanEmail, showNavigation, showSocial, homePage, upcomingShows', 'length', 'max'=>1),
 			array('musicLink, merchLink, recommendedheading', 'length', 'max'=>255),
 			array('songkickId', 'length', 'max'=>200),
+			array('bandName, url','unique'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, userId, bandName, url, fanEmail, shoFanEmail, genreId, genreTags, paypalEmail, currency, yourLocation, taxPercent, returnPolicy, shippingInfo, musicLink, merchLink, showNavigation, customHeader, showSocial, homePage, upcomingShows, songkickId, recommendedheading, albumUrl, albumDescription', 'safe', 'on'=>'search'),
@@ -78,7 +79,7 @@ class Artist extends CActiveRecord
 			'albums' => array(self::HAS_MANY, 'Albums', 'artistId'),
 			'genre' => array(self::BELONGS_TO, 'Genre', 'genreId'),
 			'user' => array(self::BELONGS_TO, 'User', 'userId'),
-			'designs' => array(self::HAS_MANY, 'Design', 'artistId'),
+			'designs' => array(self::HAS_ONE, 'Design', 'artistId'),
 		);
 	}
 
@@ -91,14 +92,14 @@ class Artist extends CActiveRecord
 			'id' => 'ID',
 			'userId' => 'User',
 			'bandName' => 'Band Name',
-			'url' => 'Url',
+			'url' => 'Your URL',
 			'fanEmail' => 'Fan Email',
 			'shoFanEmail' => 'Sho Fan Email',
 			'genreId' => 'Genre',
-			'genreTags' => 'Genre Tags',
+			'genreTags' => 'Genre Tag(s)',
 			'paypalEmail' => 'Paypal Email',
 			'currency' => 'Currency',
-			'yourLocation' => 'Your Location',
+			'yourLocation' => 'Location',
 			'taxPercent' => 'Tax Percent',
 			'returnPolicy' => 'Return Policy',
 			'shippingInfo' => 'Shipping Info',

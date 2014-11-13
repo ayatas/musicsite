@@ -10,6 +10,7 @@
  * @property string $textColor
  * @property string $secondaryTextColor
  * @property string $linkColor
+ * @property string $backgroundColor
  * @property string $backgroundImage
  * @property string $backgroundRepeat
  * @property string $align
@@ -37,10 +38,12 @@ class Design extends CActiveRecord
 		return array(
 			array('artistId', 'required'),
 			array('artistId', 'numerical', 'integerOnly'=>true),
-			array('bodyColor, textColor, secondaryTextColor, linkColor, backgroundImage, backgroundRepeat, align', 'length', 'max'=>45),
+			array('bodyColor, textColor, secondaryTextColor, linkColor, backgroundColor','match', 'pattern' => '/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/',
+            'message' => 'Invalid color code.'),
+			array('bodyColor, textColor, secondaryTextColor, linkColor, backgroundColor, backgroundImage, backgroundRepeat, align', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, artistId, bodyColor, textColor, secondaryTextColor, linkColor, backgroundImage, backgroundRepeat, align', 'safe', 'on'=>'search'),
+			array('id, artistId, bodyColor, textColor, secondaryTextColor, linkColor, backgroundColor, backgroundImage, backgroundRepeat, align', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +71,7 @@ class Design extends CActiveRecord
 			'textColor' => 'Text Color',
 			'secondaryTextColor' => 'Secondary Text Color',
 			'linkColor' => 'Link Color',
+			'backgroundColor' => 'Background Color',
 			'backgroundImage' => 'Background Image',
 			'backgroundRepeat' => 'Background Repeat',
 			'align' => 'Align',
@@ -98,6 +102,7 @@ class Design extends CActiveRecord
 		$criteria->compare('textColor',$this->textColor,true);
 		$criteria->compare('secondaryTextColor',$this->secondaryTextColor,true);
 		$criteria->compare('linkColor',$this->linkColor,true);
+		$criteria->compare('backgroundColor',$this->backgroundColor,true);
 		$criteria->compare('backgroundImage',$this->backgroundImage,true);
 		$criteria->compare('backgroundRepeat',$this->backgroundRepeat,true);
 		$criteria->compare('align',$this->align,true);
