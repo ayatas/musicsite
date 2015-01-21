@@ -1,351 +1,98 @@
-<div id="collection-items" class="collection-items">
-  <ol class="collection-grid "
-    data-ismain="true" data-iswish="false" data-isgiftsgiven="false">
-    <li id="collection-item-container_3353038599"
-    class="collection-item-container track_play_hilite "
-    data-trackid="1094451396"
-    data-itemid="3353038599"
-    data-itemtype="album"
-    data-tralbumid="3353038599"
-    data-tralbumtype="a"
-    data-bandid="1188834120"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="1094451396"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
+<div id="left-col">
+  <div id="fan-bio-pic-outer">
+    <div id="fan-bio-pic">
+      <?php if($user->image): ?>
+      <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/fan/<?php echo $user->image; ?>" width="210" height="210" itemprop="image"></div>
+    <?php endif; ?>
+  </div>
+  <div id="fan-bio-content" >
+    <div id="name-location-wrapper">
+      <h1 class="fan-name">Maggie DeVries </h1>
+      <div class="fan-location"> <span class="">Michigan</span> </div>
+    </div>
+    <div id="fan-counts">
+      <div id="fan-collection-count" class="section cf">
+        <div class="titles">
+          <h3><a href="#">Collection</a></h3>
+          <h3><a href="#">Wishlist</a></h3>
         </div>
-        <a target="_blank" href="/album/i-ship-it-original-soundtrack" class="item-link">
-        <div class="collection-item-title">I Ship It | Original Soundtrack <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">I Ship It | Original Soundtrack</div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </span> <span id="favtrack-why-wrapper-item_3353038599">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">featured track </span> <span class="track_play_time" data-trackid="1094451396"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span>
-            <div> <a target="_blank" class="fav-track-link" href="/i-ship-it-original-soundtrack">Horcruxes | Mary Kate Wiles | Music Video Version</a> <span class="fav-track-static">Horcruxes | Mary Kate Wiles | Music Video Version</span> </div>
+        <div class="purchases count"><a href="/maggiedevries">40</a></div>
+        <div class="wishlist count">0</div>
+      </div>
+      <div id="fan-follows" class="section">
+        <div id="fan-following-count" class="cf">
+          <div class="following">
+            <h3 class="following-head"><a href="/maggiedevries/following">Following</a></h3>
+            <span class="count" id="following-bands-count">16</span> <span class="following-text"> artists,</span> <span class="count" id="following-fans-count">0</span><span class="following-text"> fans &nbsp;<!-- nbsp for better line wrap --></span> </div>
+          <div class="followers">
+            <h3 class='followers-head'><a href="/maggiedevries/followers">Followed by</a></h3>
+            <span class="count" id="followers-count">4</span> fans </div>
+        </div>
+      </div>
+    </div>
+    <div id="fan-counts-brief" class="section followbutton  ">
+      <div id="fan-collection-count">
+        <h3> <a href="#">Collection</a> </h3>
+        <div class="purchases"> <span class="count">40</span> </div>
+      </div>
+      <div id="fan-wishlist-count">
+        <h3> Wishlist </h3>
+        <div class="purchases"> <span class="count">0</span> </div>
+      </div>
+      <div id="fan-follows">
+        <div id="fan-following-count">
+          <div class="following">
+            <h3 class="following-head"><a href="/maggiedevries/following">Following</a></h3>
+            <span class="count" id="following-bands-count">16</span> </div>
+        </div>
+      </div>
+      <div id="following-actions">
+        <button id="follow-unfollow_27546" type="button" class="follow-unfollow " onclick="Fanpage.followUnfollow(27546, 'owner', this);">
+        <div>Follow</div>
+        </button>
+      </div>
+      <div class="following-note"> <span>You're now following Maggie DeVries</span>, which means you'll see a story in your music feed whenever Maggie DeVries collects new music. We'll also send you the occasional email summarizing the activity of all the fans you follow (you can turn that off over on your settings, if you prefer).
+        <div class="close followingnoteclose">close</div>
+      </div>
+    </div>
+    <div class="bc-ui2 reportFan" onclick="ReportFan.show_form();"></div>
+  </div>
+  <a id="track_play_waypoint" class="waypoint track_play_waypoint"> <img src=""/>
+  <div class="waypoint-header-last">last played</div>
+  <div class="waypoint-header-now">now playing</div>
+  <div class="waypoint-item-title"></div>
+  <div class="waypoint-artist-title"></div>
+  </a> </div>
+<div id="collection-container" class="collection-container noreviewtrack">
+  <div id="collection-items" class="collection-items">
+    <ol class="collection-grid">
+      <?php foreach($albums as $album): ?>
+      <li class="collection-item-container track_play_hilite">
+        <div class="collection-item-gallery-container">
+          <div class="collection-item-art-container">
+            <?php if($album->album->image): ?>
+            <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/albums/<?php echo $album->album->image; ?>">
+            <?php endif; ?>
+          </div>
+          <a target="_blank" href="/album/i-ship-it-original-soundtrack" class="item-link">
+          <div class="collection-item-title"><?php echo $album->album->name; ?></div>
+          </a> </div>
+        <div class="collection-item-details-container"> <span class="item-link-alt">
+          <div class="collection-item-title">I Ship It | Original Soundtrack</div>
+          <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
+          </span>
+          <div class="collection-item-actions wishlist">
+            <ul>
+              <li class="first" id="collect-item_3353038599"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
+              <span class="dot wl">·</span>
+              <li class="buy-now "><a href="/album/i-ship-it-original-soundtrack" target="_blank">buy now</a></li>
+              <span class="dot">·</span>
+              <li class="hear-more"><a href="/album/i-ship-it-original-soundtrack" target="_blank">hear more</a></li>
+            </ul>
           </div>
         </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_3353038599"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/album/i-ship-it-original-soundtrack" target="_blank">buy now</a></li>
-            <span class="dot">·</span>
-            <li class="hear-more"><a href="/album/i-ship-it-original-soundtrack" target="_blank">hear more</a></li>
-          </ul>
-        </div>
-        <div class="collected-by" >
-          <div class="collected-by-header"> appears in <a class="item-link also-link" onclick="Fanpage.toggleAlsoCollectedBy(this); return false;"> 11 other collections </a> </div>
-          <div class="deets" style="display:none"></div>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_3353038599"
-    class="collection-item-container track_play_hilite "
-    data-trackid="1094451396"
-    data-itemid="3353038599"
-    data-itemtype="album"
-    data-tralbumid="3353038599"
-    data-tralbumtype="a"
-    data-bandid="1188834120"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="1094451396"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/album/i-ship-it-original-soundtrack" class="item-link">
-        <div class="collection-item-title">I Ship It | Original Soundtrack <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">I Ship It | Original Soundtrack</div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </span> <span id="favtrack-why-wrapper-item_3353038599">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">featured track </span> <span class="track_play_time" data-trackid="1094451396"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span>
-            <div> <a target="_blank" class="fav-track-link" href="/i-ship-it-original-soundtrack">Horcruxes | Mary Kate Wiles | Music Video Version</a> <span class="fav-track-static">Horcruxes | Mary Kate Wiles | Music Video Version</span> </div>
-          </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_3353038599"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/album/i-ship-it-original-soundtrack" target="_blank">buy now</a></li>
-            <span class="dot">·</span>
-            <li class="hear-more"><a href="/album/i-ship-it-original-soundtrack" target="_blank">hear more</a></li>
-          </ul>
-        </div>
-        <div class="collected-by" >
-          <div class="collected-by-header"> appears in <a class="item-link also-link" onclick="Fanpage.toggleAlsoCollectedBy(this); return false;"> 11 other collections </a> </div>
-          <div class="deets" style="display:none"></div>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_3353038599"
-    class="collection-item-container track_play_hilite "
-    data-trackid="1094451396"
-    data-itemid="3353038599"
-    data-itemtype="album"
-    data-tralbumid="3353038599"
-    data-tralbumtype="a"
-    data-bandid="1188834120"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="1094451396"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/album/i-ship-it-original-soundtrack" class="item-link">
-        <div class="collection-item-title">I Ship It | Original Soundtrack <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">I Ship It | Original Soundtrack</div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </span> <span id="favtrack-why-wrapper-item_3353038599">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">featured track </span> <span class="track_play_time" data-trackid="1094451396"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span>
-            <div> <a target="_blank" class="fav-track-link" href="/i-ship-it-original-soundtrack">Horcruxes | Mary Kate Wiles | Music Video Version</a> <span class="fav-track-static">Horcruxes | Mary Kate Wiles | Music Video Version</span> </div>
-          </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_3353038599"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/album/i-ship-it-original-soundtrack" target="_blank">buy now</a></li>
-            <span class="dot">·</span>
-            <li class="hear-more"><a href="/album/i-ship-it-original-soundtrack" target="_blank">hear more</a></li>
-          </ul>
-        </div>
-        <div class="collected-by" >
-          <div class="collected-by-header"> appears in <a class="item-link also-link" onclick="Fanpage.toggleAlsoCollectedBy(this); return false;"> 11 other collections </a> </div>
-          <div class="deets" style="display:none"></div>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_3353038599"
-    class="collection-item-container track_play_hilite "
-    data-trackid="1094451396"
-    data-itemid="3353038599"
-    data-itemtype="album"
-    data-tralbumid="3353038599"
-    data-tralbumtype="a"
-    data-bandid="1188834120"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="1094451396"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/album/i-ship-it-original-soundtrack" class="item-link">
-        <div class="collection-item-title">I Ship It | Original Soundtrack <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">I Ship It | Original Soundtrack</div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </span> <span id="favtrack-why-wrapper-item_3353038599">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">featured track </span> <span class="track_play_time" data-trackid="1094451396"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span>
-            <div> <a target="_blank" class="fav-track-link" href="/i-ship-it-original-soundtrack">Horcruxes | Mary Kate Wiles | Music Video Version</a> <span class="fav-track-static">Horcruxes | Mary Kate Wiles | Music Video Version</span> </div>
-          </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_3353038599"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/album/i-ship-it-original-soundtrack" target="_blank">buy now</a></li>
-            <span class="dot">·</span>
-            <li class="hear-more"><a href="/album/i-ship-it-original-soundtrack" target="_blank">hear more</a></li>
-          </ul>
-        </div>
-        <div class="collected-by" >
-          <div class="collected-by-header"> appears in <a class="item-link also-link" onclick="Fanpage.toggleAlsoCollectedBy(this); return false;"> 11 other collections </a> </div>
-          <div class="deets" style="display:none"></div>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_3353038599"
-    class="collection-item-container track_play_hilite "
-    data-trackid="1094451396"
-    data-itemid="3353038599"
-    data-itemtype="album"
-    data-tralbumid="3353038599"
-    data-tralbumtype="a"
-    data-bandid="1188834120"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="1094451396"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/album/i-ship-it-original-soundtrack" class="item-link">
-        <div class="collection-item-title">I Ship It | Original Soundtrack <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">I Ship It | Original Soundtrack</div>
-        <div class="collection-item-artist">by Yulin Kuang | Film Soundtracks</div>
-        </span> <span id="favtrack-why-wrapper-item_3353038599">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">featured track </span> <span class="track_play_time" data-trackid="1094451396"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span>
-            <div> <a target="_blank" class="fav-track-link" href="/i-ship-it-original-soundtrack">Horcruxes | Mary Kate Wiles | Music Video Version</a> <span class="fav-track-static">Horcruxes | Mary Kate Wiles | Music Video Version</span> </div>
-          </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_3353038599"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/album/i-ship-it-original-soundtrack" target="_blank">buy now</a></li>
-            <span class="dot">·</span>
-            <li class="hear-more"><a href="/album/i-ship-it-original-soundtrack" target="_blank">hear more</a></li>
-          </ul>
-        </div>
-        <div class="collected-by" >
-          <div class="collected-by-header"> appears in <a class="item-link also-link" onclick="Fanpage.toggleAlsoCollectedBy(this); return false;"> 11 other collections </a> </div>
-          <div class="deets" style="display:none"></div>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_1422434971"
-    class="collection-item-container track_play_hilite "
-    data-trackid="4198587848"
-    data-itemid="1422434971"
-    data-itemtype="album"
-    data-tralbumid="1422434971"
-    data-tralbumtype="a"
-    data-bandid="4188985161"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="4198587848"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/album/out-of-my-mind" class="item-link">
-        <div class="collection-item-title">Out of My Mind <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Tana Victoria</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">Out of My Mind</div>
-        <div class="collection-item-artist">by Tana Victoria</div>
-        </span> <span id="favtrack-why-wrapper-item_1422434971">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">featured track </span> <span class="track_play_time" data-trackid="4198587848"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span>
-            <div> <a target="_blank" class="fav-track-link" href="/out-of-my-mind">Broken</a> <span class="fav-track-static">Broken</span> </div>
-          </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_1422434971"> <span class="wishlist-msg" title="Add this album to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this album from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/album/out-of-my-mind" target="_blank">buy now</a></li>
-            <span class="dot">·</span>
-            <li class="hear-more"><a href="/album/out-of-my-mind" target="_blank">hear more</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_810380295"
-    class="collection-item-container track_play_hilite "
-    data-trackid="810380295"
-    data-itemid="810380295"
-    data-itemtype="track"
-    data-tralbumid="810380295"
-    data-tralbumtype="t"
-    data-bandid="4188985161"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-    <?php
-	//$fans = array("test1","test2");
-	//foreach($fans as $fan){
-	//	print_r($_fan);
-	//}
-	?>
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="810380295"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/track/temporary" class="item-link">
-        <div class="collection-item-title">Temporary <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Tana Victoria</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">Temporary</div>
-        <div class="collection-item-artist">by Tana Victoria</div>
-        </span> <span id="favtrack-why-wrapper-item_810380295">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">track</span> <span class="track_play_time" data-trackid="810380295"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span> </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_810380295"> <span class="wishlist-msg" title="Add this track to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this track from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/track/temporary" target="_blank">buy now</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-    <li id="collection-item-container_1290403153"
-    class="collection-item-container track_play_hilite "
-    data-trackid="1290403153"
-    data-itemid="1290403153"
-    data-itemtype="track"
-    data-tralbumid="1290403153"
-    data-tralbumtype="t"
-    data-bandid="4188985161"
-    data-ispurchasable="true"
-    data-index=""
-    data-giftid=""
-    >
-      <div class="collection-item-gallery-container "> <span class="bc-ui2 collect-item-icon-alt"></span>
-        <div class="collection-item-art-container"> <a class="track_play_auxiliary" data-trackid="1290403153"> <img class="collection-item-art" src="<?php echo Yii::app()->request->baseUrl; ?>/images/a123.jpg"> <span class="item_link_play"> <span class="item_link_play_bkgd round4"></span> <span class="item_link_play_widget bc-ui"></span> </span> </a>
-          <div class="multiple-number">x</div>
-        </div>
-        <a target="_blank" href="/track/broken" class="item-link">
-        <div class="collection-item-title">Broken <span class="collection-item-gift-given-title hidden">(gift given)</span> </div>
-        <div class="collection-item-artist">by Tana Victoria</div>
-        </a> </div>
-      <div class="collection-item-details-container"> <span class="item-link-alt">
-        <div class="collection-item-title">Broken</div>
-        <div class="collection-item-artist">by Tana Victoria</div>
-        </span> <span id="favtrack-why-wrapper-item_1290403153">
-        <div class='knockout-container'>
-          <div class="collection-item-fav-track"> <span class="favoriteTrackLabel">track</span> <span class="track_play_time" data-trackid="1290403153"> <span class="time_elapsed">00:00</span>/<span class="time_total">00:00</span> </span> </div>
-        </div>
-        </span>
-        <div class="collection-item-actions wishlist">
-          <ul>
-            <li class="first" id="collect-item_1290403153"> <span class="wishlist-msg" title="Add this track to your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>wishlist</a></span> </span> <span class="wishlisted-msg"> <span title="Remove this track from your wishlist"> <span class="bc-ui2 collect-item-icon trigger"></span> <span class="text trigger"><a>in wishlist</a></span> </span> <span class="view"><a target="_blank" href="/Gemini77#wishlist" title="View your wishlist">&raquo;</a></span> </span> <span class="purchased-msg"> <span class="bc-ui2 collect-item-icon"></span> <span class="purchased-msg-text">You own this</span> </span> </li>
-            <span class="dot wl">·</span>
-            <li class="buy-now "><a href="/track/broken" target="_blank">buy now</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-  </ol>
+      </li>
+      <?php endforeach; ?>
+    </ol>
+  </div>
 </div>

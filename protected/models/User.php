@@ -42,6 +42,7 @@ class User extends CActiveRecord
 		return array(
 			array('name, email, password', 'required','on'=>'create,adminCreate,adminUpdate'),
 			array('name, email', 'unique','on'=>'create,adminCreate,adminUpdate'),
+			array('email','email'),
 			array('name, password', 'required','on'=>'login'),
 			array('password', 'authenticate','on'=>'login'),
 			array('name, email, password, image, location, websites', 'length', 'max'=>45),

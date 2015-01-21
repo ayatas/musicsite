@@ -32,13 +32,13 @@
 		<div id="logo"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="My Music Hut" /></a></div>
         
         <div class="right">
-        <?php 	
+        <?php /*?><?php 	
 	if(!Yii::app()->user->isGuest){
 		$user = User::model()->findByPk(Yii::app()->user->getId());	
 		echo 'Hi '.$user->name;
 		echo CHtml::link('Your Site', array('artist/site','domain'=>$user->artists->url));
 	}
-	?>  
+	?>  <?php */?>
         </div>
         <div class="clear"></div>
 	</div><!-- header -->	
@@ -48,7 +48,7 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Artist Signup', 'url'=>array('/artist/signup'),'visible'=>Yii::app()->user->getId()==""),
-				array('label'=>'Fan Signup', 'url'=>array('/site'), 'visible'=>Yii::app()->user->getId()==""),	
+				array('label'=>'Fan Signup', 'url'=>array('/fan/signup'), 'visible'=>Yii::app()->user->getId()==""),	
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->getId()==""),				
 				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>Yii::app()->user->getId()!="")
 			),
