@@ -1,14 +1,64 @@
 <div id="left-col">
-  <div id="fan-bio-pic-outer">
-    <div id="fan-bio-pic">
-      <?php if($user->image): ?>
-      <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/fan/<?php echo $user->image; ?>" width="210" height="210" itemprop="image"></div>
-    <?php endif; ?>
+<div id="fan-bio-pic-outer">
+  <div id="fan-bio-pic">
+ 	 <div id="profilePic" class="uploadPic <?php if(!$user->image) echo 'hide';?>">
+ 	<img id="profileImage" src="<?php echo Yii::app()->request->baseUrl; ?>/images/fan/<?php echo $user->image; ?>" width="210" height="210">
+    </div>
+    <div class="removePic <?php if(!$user->image) echo 'hide';?>">
+      <?php 	
+        echo CHtml::ajaxLink(
+        "X",
+        Yii::app()->createUrl('fan/removeFanPic'),
+        array(
+        'beforeSend' => "function(request){ if(confirm('Are you sure you want to delete your profile picture?')) { return true; } else{ return false; }}",
+        'success' => "function(data){
+			$('.removePic').hide();
+			$('.uploadPic').show();
+			$('#profilePic').hide(); 			
+		}",
+        ),
+        array(
+        'class' => 'removeAlbum'
+        )
+        );
+        ?>
+    </div>
+    <div class="uploadPic <?php if($user->image) echo 'hide';?>">
+      <?php
+        $getHeaderImage = CController::createUrl('artist/getHeaderImage');    
+        $this->widget('ext.EAjaxUpload.EAjaxUpload',
+        array(
+        'id'=>'uploadCustomHeader',
+        'config'=>array(
+        'action'=>Yii::app()->createUrl('fan/updateProfilePic'),
+        'template'=>'<div class="qq-uploader"><div class="qq-upload-drop-area"><span>Drop files here to upload</span></div><div class="qq-upload-button">Upload Profile Picture</div><ul class="qq-upload-list"></ul></div>',
+        'allowedExtensions'=>array("jpg","jpeg","gif","png"),
+        'sizeLimit'=>2*1024*1024,
+        'auto'=>true,
+        'multiple' => false,
+        //'onSubmit'=>'js:function(){ $("#userLoader").addClass("userloading");}',
+        'onComplete'=>'js:function(id, fileName, responseJSON){	
+			$("#profileImage").attr("src", "http://localhost/musicsite/images/fan/"+responseJSON.filename);
+			$(".removePic").show();
+			$(".uploadPic").hide(); 
+			$("#profilePic").show();
+        }',
+        'messages'=>array(
+        'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+        'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+        'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+        'emptyError'=>"{file} is empty, please select files again without it.",
+        'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+        ),
+        )                
+        ));
+        ?>
+    </div>
   </div>
   <div id="fan-bio-content" >
     <div id="name-location-wrapper">
-      <h1 class="fan-name">Maggie DeVries </h1>
-      <div class="fan-location"> <span class="">Michigan</span> </div>
+      <h1 class="fan-name"><?php echo $user->name; ?></h1>
+      <div class="fan-location"> <span class=""><?php echo $user->location; ?></span> </div>
     </div>
     <div id="fan-counts">
       <div id="fan-collection-count" class="section cf">
@@ -16,7 +66,7 @@
           <h3><a href="#">Collection</a></h3>
           <h3><a href="#">Wishlist</a></h3>
         </div>
-        <div class="purchases count"><a href="/maggiedevries">40</a></div>
+        <div class="purchases count"><a href="/maggiedevries"><?php echo count($albums); ?></a></div>
         <div class="wishlist count">0</div>
       </div>
       <div id="fan-follows" class="section">
@@ -46,11 +96,6 @@
             <span class="count" id="following-bands-count">16</span> </div>
         </div>
       </div>
-      <div id="following-actions">
-        <button id="follow-unfollow_27546" type="button" class="follow-unfollow " onclick="Fanpage.followUnfollow(27546, 'owner', this);">
-        <div>Follow</div>
-        </button>
-      </div>
       <div class="following-note"> <span>You're now following Maggie DeVries</span>, which means you'll see a story in your music feed whenever Maggie DeVries collects new music. We'll also send you the occasional email summarizing the activity of all the fans you follow (you can turn that off over on your settings, if you prefer).
         <div class="close followingnoteclose">close</div>
       </div>
@@ -63,6 +108,7 @@
   <div class="waypoint-item-title"></div>
   <div class="waypoint-artist-title"></div>
   </a> </div>
+</div>
 <div id="collection-container" class="collection-container noreviewtrack">
   <div id="collection-items" class="collection-items">
     <ol class="collection-grid">

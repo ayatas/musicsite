@@ -24,7 +24,7 @@ class FanController extends Controller
 			),
 			array(
 				'allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions' => array('index'),
+				'actions' => array('index','updateProfilePic','removeFanPic'),
 				'users' => array('@') 
 			),
 			array(
@@ -72,6 +72,46 @@ class FanController extends Controller
 		$this->render ( 'signup', array (
 				'model' => $model
 		) );
+	}
+	
+	public function actionUpdateProfilePic(){
+		
+		$userId = Yii::app()->user->getId();
+		
+		Yii::import ( "ext.EAjaxUpload.qqFileUploader" );
+		$folder = Yii::getPathOfAlias ( 'webroot' ) . '/images/fan/'; // folder for uploaded files
+		$allowedExtensions = array (
+				"jpg",
+				"jpeg",
+				"gif",
+				"png" 
+		); // array("jpg","jpeg","gif","exe","mov" and etc...
+		$sizeLimit = 2 * 1024 * 1024; // maximum file size in bytes
+		$uploader = new qqFileUploader ( $allowedExtensions, $sizeLimit );
+		$result = $uploader->handleUpload ( $folder );
+		$return = htmlspecialchars ( json_encode ( $result ), ENT_NOQUOTES );
+		$fileSize = filesize ( $folder . $result ['filename'] ); // GETTING FILE SIZE
+		$fileName = $result ['filename']; // GETTING FILE NAME
+		
+		if (! empty ( $fileName )) {
+			if($userId){
+				$fan = User::model ()->findByPk($userId);
+				$fan->image = $fileName;
+				$fan->save();
+			}
+		}
+		
+		echo $return; // it's array
+	}
+	
+	
+	public function actionRemoveFanPic(){
+		$userId = Yii::app()->user->getId();
+		if($userId){
+			$fan = User::model ()->findByPk($userId);
+			$fan->image = "";
+			$fan->save();
+		}
 	}
 	
 	public function passwordEncode($password) {

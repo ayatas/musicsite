@@ -140,7 +140,7 @@ div.comments-container.hidden { display: none; }
 /* bio */
 
 .section.empty { display: none; }
-#fan-bio-pic { width: 210px; height: 210px; }
+#fan-bio-pic { width: 210px; height: 210px; border:1px solid #cacaca; }
 #fan-bio-pic img { max-height: 210px; max-width: 210px; outline: 1px solid rgba(255, 255, 255, 0.3); }
 #fan-bio-content { }
 #fan-bio-content .wishlist, #fan-bio-content .purchases { width: 50%; display: block; }
@@ -546,3 +546,9 @@ transform-origin: top left;
 .collected-by .deets .pic > .tooltip img.grid { display: block; width: 140px; height: 140px; margin-bottom: 5px; }
 .collected-by .deets .pic > .tooltip .name { width: 100%; }
 .tooltip .writing { font-family: georgia, serif; font-style: italic; width: 100%; }
+
+
+#fan-bio-pic { position:relative;}
+#fan-bio-pic .removePic, #fan-bio-pic .uploadPic{ position:absolute; bottom:0; right:0;}
+.hide{ display:none;}
+.removePic .removeAlbum{ padding:5px; background:#fff;}
