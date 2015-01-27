@@ -71,6 +71,19 @@ class SiteController extends Controller
 		}
 		$this->renderPartial('contact',array('model'=>$model));
 	}
+	
+	public function actionProfile(){
+				
+		$model = new Fan();		
+				
+		if(isset($_POST['Fan'])){
+			$model->attributes = $_POST['Fan'];
+			if($model->save()){
+				$this->redirect(array("site/index"));				
+			}
+		}		
+		$this->render("fan",array("site/index"));		
+	}
 
 	/**
 	 * Displays the login page

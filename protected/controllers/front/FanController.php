@@ -117,6 +117,16 @@ class FanController extends Controller
 	public function passwordEncode($password) {
 		return base64_encode ( base64_encode ( $password ) );
 	}
+	
+	public function base64Encode($password){
+		
+		$password = $_GET['Password'];		
+		$model = new Fan();		
+		$model->attributes = $_POST['Fan'];		
+		if($model->save()){
+			$this->redirect(array('site/index'));
+		}
+	}
 
 	// Uncomment the following methods and override them if needed
 	/*
